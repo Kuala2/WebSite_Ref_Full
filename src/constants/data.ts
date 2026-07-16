@@ -294,7 +294,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "strizhki",
     description: "Умные стрижки по форме лица, не требующие долгой укладки, дневные, коктейльные и вечерние прически.",
     longDescription: "В салоне «Стенс» мы создаем стрижки, которые подчеркивают вашу индивидуальность и легки в повседневной жизни. Мы детально изучаем структуру волос, направление их роста и форму лица. В стоимость любой стрижки уже входит мытье головы с массажем и профессиональный стайлинг. Также мы создаем шикарные локоны и прически для особых случаев.",
-    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 000 ₽",
     prices: [
       { name: "Женская стрижка (короткие волосы)", price: "1 500 ₽" },
@@ -411,9 +411,9 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1588636186851-f4044cda6da3?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["4"],
   },

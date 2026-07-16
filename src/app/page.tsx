@@ -70,7 +70,7 @@ export default function HomePage() {
             </h2>
             <div className="relative w-full aspect-[3/4] hidden md:block rounded-2xl overflow-hidden mt-8">
               <Image 
-                src="https://images.unsplash.com/photo-1521590832167-7bfc17484d80?auto=format&fit=crop&q=80&w=600" 
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" 
                 alt="Интерьер салона красоты Стенс" 
                 fill 
                 className="object-cover"
