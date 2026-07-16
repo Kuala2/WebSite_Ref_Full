@@ -30,7 +30,7 @@ export default function ContactsPage() {
       {/* Hero Header */}
       <section className="pt-32 pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 mb-8">
+          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
             <span className="mx-4">/</span>
             <span className="text-brand-dark">Контакты</span>
@@ -52,7 +52,7 @@ export default function ContactsPage() {
           <div className="space-y-16">
             <div className="space-y-12">
               <div>
-                <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mb-4">Салон «Стенс»</h4>
+                <h4 className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4">Салон «Стенс»</h4>
                 <p className="text-2xl md:text-3xl font-serif-display text-brand-dark leading-tight">{SALON_INFO.address}</p>
                 <p className="text-base font-medium text-brand-dark mt-4 block">
                   м. Горьковская (5 минут пешком)
@@ -60,13 +60,13 @@ export default function ContactsPage() {
               </div>
 
               <div>
-                <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mb-4">Режим работы</h4>
+                <h4 className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4">Режим работы</h4>
                 <p className="text-xl text-brand-dark font-normal">{SALON_INFO.scheduleWeekdays}</p>
                 <p className="text-xl text-brand-dark font-normal">{SALON_INFO.scheduleWeekends}</p>
               </div>
 
               <div>
-                <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mb-4">Телефон</h4>
+                <h4 className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4">Телефон</h4>
                 <a
                   href={SALON_INFO.phoneLink}
                   className="font-serif-display text-3xl md:text-5xl text-brand-dark hover:text-brand-accent transition-colors block"
@@ -78,7 +78,7 @@ export default function ContactsPage() {
 
             {/* Booking Box */}
             <div id="zapis" className="border-t border-brand-dark/20 pt-16 scroll-mt-32">
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mb-4 block">Скидка 10% на первый визит</span>
+              <span className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4 block">Скидка 10% на первый визит</span>
               <h3 className="font-serif-display text-4xl text-brand-dark mb-8">Онлайн-запись 24/7</h3>
               
               <div className="flex flex-col gap-6 w-full max-w-sm">
@@ -94,7 +94,7 @@ export default function ContactsPage() {
 
           {/* Map & Directions */}
           <div className="flex flex-col gap-8">
-            <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-2xl overflow-hidden">
+            <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-[4px] overflow-hidden">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?text=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%2058&z=16"
                 width="100%"
@@ -107,7 +107,7 @@ export default function ContactsPage() {
               ></iframe>
             </div>
             
-            <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-2xl shadow-sm">
+            <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-[4px] shadow-sm">
               <h4 className="font-serif-display text-2xl text-brand-dark mb-4">Как добраться</h4>
               <p className="text-sm md:text-base font-normal text-brand-dark leading-relaxed mb-4">
                 Салон расположен в историческом центре города, на пешеходной улице Большой Покровской.

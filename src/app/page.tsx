@@ -1,4 +1,4 @@
-import Image from "next/image";
+import WarmImage from "@/components/UI/WarmImage";
 import Link from "next/link";
 import { SALON_INFO, ADVANTAGES, TOP_SERVICES, MASTERS, REVIEWS, MAIN_FAQS } from "@/constants/data";
 import Button from "@/components/UI/Button";
@@ -21,7 +21,7 @@ export default function HomePage() {
       {/* 1. HERO SECTION (EDITORIAL) */}
       <section className="relative w-full min-h-[100svh] flex items-center pt-24 pb-12 overflow-hidden">
         <div className="absolute top-0 right-0 w-3/4 md:w-1/2 h-full z-0">
-          <Image
+          <WarmImage
             src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=1600"
             alt="Стенс - Премиальный салон красоты"
             fill
@@ -35,10 +35,10 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-brand-accent font-semibold mb-4 block">
+            <span className="text-xs uppercase tracking-[0.12em] text-brand-accent font-semibold mb-4 block">
               Искусство преображения
             </span>
-            <h1 className="font-serif-display text-5xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight mb-8 md:mb-12">
+            <h1 className="font-serif-display text-[clamp(72px,9vw,140px)] leading-[0.9] tracking-tight mb-8 md:mb-12">
               Стенс
             </h1>
             
@@ -51,7 +51,7 @@ export default function HomePage() {
                 <Button href="/kontakty#zapis" variant="primary" className="px-10 py-5 text-lg">
                   Записаться
                 </Button>
-                <div className="flex flex-col justify-center text-sm font-semibold tracking-[0.2em] uppercase text-brand-dark gap-2">
+                <div className="flex flex-col justify-center text-sm font-semibold tracking-[0.12em] uppercase text-brand-dark gap-2">
                   <span>{SALON_INFO.address}</span>
                   <span className="text-brand-accent">★ {SALON_INFO.rating} / {SALON_INFO.reviewsCount} отзывов</span>
                 </div>
@@ -68,8 +68,8 @@ export default function HomePage() {
             <h2 className="font-serif-display text-4xl md:text-5xl sticky top-32">
               Почему выбирают Стенс
             </h2>
-            <div className="relative w-full aspect-[3/4] hidden md:block rounded-2xl overflow-hidden mt-8">
-              <Image 
+            <div className="relative w-full aspect-[3/4] hidden md:block rounded-[4px] overflow-hidden mt-8">
+              <WarmImage 
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" 
                 alt="Интерьер салона красоты Стенс" 
                 fill 
@@ -81,7 +81,7 @@ export default function HomePage() {
           <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
             {ADVANTAGES.map((adv, idx) => (
               <div key={idx} className="flex flex-col gap-6">
-                <span className="text-xs uppercase tracking-[0.2em] text-brand-accent font-semibold">
+                <span className="font-serif-display text-[56px] leading-none text-brand-caramel/35">
                   0{idx + 1}
                 </span>
                 <h3 className="font-serif-display text-3xl">
@@ -97,13 +97,15 @@ export default function HomePage() {
       </section>
 
       {/* 3. TOP SERVICES (EDITORIAL CAROUSEL / MASONRY) */}
-      <section className="py-32 md:py-48 bg-brand-dark text-brand-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 md:py-48 bg-brand-brown text-brand-cream relative">
+        <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-brand-cream to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-brand-cream to-transparent pointer-events-none" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24 md:mb-32">
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Услуги и цены
             </h2>
-            <Link href="/uslugi" className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
+            <Link href="/uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
               Посмотреть меню &rarr;
             </Link>
           </div>
@@ -111,8 +113,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-x-16 md:gap-y-48">
             {TOP_SERVICES.map((service, idx) => (
               <div key={idx} className={`group flex flex-col ${idx % 2 !== 0 ? 'md:mt-32' : ''}`}>
-                <div className="relative aspect-[3/4] w-full mb-12 rounded-2xl overflow-hidden">
-                  <Image
+                <div className="relative aspect-[3/4] w-full mb-12 rounded-[4px] overflow-hidden">
+                  <WarmImage
                     src={service.image}
                     alt={service.title}
                     fill
@@ -125,7 +127,7 @@ export default function HomePage() {
                   <h3 className="font-serif-display text-3xl md:text-4xl">
                     {service.title}
                   </h3>
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent shrink-0 mt-3">
+                  <span className="text-xl md:text-2xl font-serif-display text-brand-caramel shrink-0 mt-3">
                     от {service.priceFrom}
                   </span>
                 </div>
@@ -134,7 +136,7 @@ export default function HomePage() {
                   {service.description}
                 </p>
                 
-                <Link href={`/uslugi/${service.slug}`} className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors flex items-center">
+                <Link href={`/uslugi/${service.slug}`} className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors flex items-center">
                   Подробнее
                 </Link>
               </div>
@@ -154,18 +156,12 @@ export default function HomePage() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 h-[150vh] md:h-[100svh]">
-          <div className="relative md:col-span-7 h-full overflow-hidden group rounded-2xl">
-             <Image src={previewWorks[0]} alt="Окрашивание блонд в салоне Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-          </div>
-          <div className="md:col-span-5 flex flex-col gap-4 md:gap-8 h-full">
-            <div className="relative h-1/2 overflow-hidden group rounded-2xl">
-              <Image src={previewWorks[1]} alt="Маникюр с покрытием" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {previewWorks.map((src, idx) => (
+            <div key={idx} className="relative aspect-[3/4] w-full overflow-hidden group rounded-[4px] shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-300">
+               <WarmImage src={src} alt="Работа салона Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
             </div>
-            <div className="relative h-1/2 overflow-hidden group rounded-2xl">
-              <Image src={previewWorks[2]} alt="Стильная женская стрижка" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -176,7 +172,7 @@ export default function HomePage() {
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Команда мастеров
             </h2>
-            <Link href="/o-salone" className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
+            <Link href="/o-salone" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
               Вся команда &rarr;
             </Link>
           </div>
@@ -189,44 +185,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. REVIEWS & FAQ (SPLIT) */}
-      <section className="py-32 md:py-48 border-t border-brand-dark/10 bg-[#F2ECE4]">
+      {/* 6. REVIEWS */}
+      <section className="py-32 border-t border-brand-dark/10 bg-[#F2ECE4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
-            
-            {/* Reviews */}
-            <div>
-              <h2 className="font-serif-display text-4xl md:text-5xl mb-16">Отзывы клиентов</h2>
-              <div className="flex flex-col">
-                {previewReviews.map((review) => (
-                  <ReviewCard key={review.id} review={review} />
-                ))}
-              </div>
-            </div>
-
-            {/* FAQ */}
-            <div>
-              <h2 className="font-serif-display text-4xl md:text-5xl mb-16">Частые вопросы</h2>
-              <Accordion items={MAIN_FAQS} />
-            </div>
-
+          <h2 className="font-serif-display text-4xl md:text-5xl mb-16 text-center">Отзывы клиентов</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {previewReviews.map((review) => (
+              <ReviewCard key={review.id} review={review} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 7. CTA (GIANT TEXT) */}
-      <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight mb-16 hover:text-brand-accent transition-colors duration-500">
-          <a href="/kontakty#zapis">Запишитесь на удобное время</a>
+      {/* 7. FAQ */}
+      <section className="py-32 border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif-display text-4xl md:text-5xl mb-16 text-center">Частые вопросы</h2>
+          <Accordion items={MAIN_FAQS} />
+        </div>
+      </section>
+
+      {/* 8. CTA (GIANT TEXT) */}
+      <section className="bg-brand-brown text-white min-h-[60vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative">
+        <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-brand-cream to-transparent pointer-events-none" />
+        
+        <h2 className="font-serif-display text-5xl md:text-6xl lg:text-[64px] leading-[1.1] tracking-tight mb-12 relative z-10">
+          Запишитесь на удобное время
         </h2>
         
-        <div className="flex flex-col sm:flex-row gap-8 items-center">
+        <div className="flex flex-col gap-8 items-center relative z-10">
           <Button href="/kontakty#zapis" variant="primary">
             Онлайн-запись
           </Button>
-          <a href={SALON_INFO.phoneLink} className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">
-            {SALON_INFO.phone}
-          </a>
+          <div className="flex flex-col gap-2 text-brand-cream/80 text-lg font-medium">
+            <a href={SALON_INFO.phoneLink} className="hover:text-brand-caramel transition-colors">
+              {SALON_INFO.phone}
+            </a>
+            <span className="text-sm opacity-80">{SALON_INFO.address}</span>
+          </div>
         </div>
       </section>
 

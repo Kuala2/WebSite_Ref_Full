@@ -18,7 +18,7 @@ export default function PriceTable({ items }: PriceTableProps) {
                 {item.name}
               </h4>
               {item.note && (
-                <p className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mt-4">
+                <p className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mt-4">
                   {item.note}
                 </p>
               )}
@@ -34,7 +34,7 @@ export default function PriceTable({ items }: PriceTableProps) {
       
       {/* Notice */}
       <div className="mt-16 flex justify-end">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-dark/50 max-w-sm text-right leading-relaxed">
+        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-dark/50 max-w-sm text-right leading-relaxed">
           Точная стоимость процедур определяется индивидуально в зависимости от длины, густоты волос и расхода материалов.
         </p>
       </div>

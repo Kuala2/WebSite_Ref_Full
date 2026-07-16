@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       {/* Hero Header */}
       <section className="bg-[#B98A5E]/10 py-16 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark tracking-wide">
+          <h1 className="font-serif-display text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark tracking-[0.12em]">
             Политика конфиденциальности
           </h1>
         </div>
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         </p>
 
         <div className="pt-8 border-t border-[#B98A5E]/10 flex justify-center">
-          <Link href="/kontakty" className="text-xs uppercase font-bold tracking-widest text-brand-accent hover:text-brand-dark transition-colors py-3 min-h-[44px] flex items-center">
+          <Link href="/kontakty" className="text-xs uppercase font-bold tracking-[0.12em] text-brand-accent hover:text-brand-dark transition-colors py-3 min-h-[44px] flex items-center">
             Вернуться в контакты &rarr;
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import WarmImage from "@/components/UI/WarmImage";
 import { notFound } from "next/navigation";
 import { SERVICES_DATA, MASTERS } from "@/constants/data";
 import PriceTable from "@/components/UI/PriceTable";
@@ -54,7 +54,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       {/* Hero */}
       <section className="pt-32 pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 mb-8">
+          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
             <span className="mx-4">/</span>
             <Link href="/uslugi" className="hover:text-brand-dark transition-colors">Услуги</Link>
@@ -69,8 +69,8 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 
       {/* Main Image */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-        <div className="w-full aspect-[21/9] relative overflow-hidden rounded-2xl">
-          <Image
+        <div className="w-full aspect-[21/9] relative overflow-hidden rounded-[4px]">
+          <WarmImage
             src={service.image}
             alt={`Стенс: ${service.title}`}
             fill
@@ -162,14 +162,14 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Наши работы</h2>
-            <Link href="/raboty" className="text-[10px] tracking-[0.2em] uppercase border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all hidden md:block">
+            <Link href="/raboty" className="text-[10px] tracking-[0.12em] uppercase border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all hidden md:block">
               Смотреть все
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {service.gallery.map((imgUrl, idx) => (
-              <div key={idx} className="relative aspect-[3/4] overflow-hidden group rounded-2xl">
-                <Image
+              <div key={idx} className="relative aspect-[3/4] overflow-hidden group rounded-[4px]">
+                <WarmImage
                   src={imgUrl}
                   alt={`${service.title} — пример работы`}
                   fill

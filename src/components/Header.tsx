@@ -43,7 +43,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-xs tracking-[0.15em] uppercase transition-colors duration-300 py-2 ${
+                  className={`text-xs tracking-[0.12em] uppercase transition-colors duration-300 py-2 ${
                     isActive
                       ? "text-brand-accent"
                       : "text-brand-dark/70 hover:text-brand-accent"
@@ -59,13 +59,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-6">
             <a
               href={SALON_INFO.phoneLink}
-              className="text-xs tracking-[0.15em] uppercase text-brand-dark hover:text-brand-accent transition-colors py-2"
+              className="text-xs tracking-[0.12em] uppercase text-brand-dark hover:text-brand-accent transition-colors py-2"
             >
               {SALON_INFO.phone}
             </a>
             <Link
               href="/kontakty#zapis"
-              className="inline-flex items-center justify-center px-8 py-3 bg-brand-accent text-brand-cream hover:bg-[#A37851] text-xs uppercase tracking-[0.15em] font-bold rounded-full shadow-sm hover:shadow-md transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-3 bg-brand-accent text-brand-cream hover:bg-[#A37851] text-xs uppercase tracking-[0.12em] font-bold rounded-[4px] shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300"
             >
               Запись онлайн
             </Link>
@@ -116,13 +116,13 @@ export default function Header() {
           </nav>
           
           <div className="mt-24 flex flex-col gap-8">
-            <a href={SALON_INFO.phoneLink} className="text-sm tracking-[0.15em] uppercase text-brand-dark">
+            <a href={SALON_INFO.phoneLink} className="text-sm tracking-[0.12em] uppercase text-brand-dark">
               {SALON_INFO.phone}
             </a>
             <Link
               href="/kontakty#zapis"
               onClick={handleLinkClick}
-              className="inline-flex items-center justify-center w-full px-6 py-4 bg-brand-accent text-brand-cream text-xs uppercase tracking-[0.15em] font-bold rounded-full shadow-sm active:shadow-none transition-all duration-300"
+              className="inline-flex items-center justify-center w-full px-6 py-4 bg-brand-accent text-brand-cream text-xs uppercase tracking-[0.12em] font-bold rounded-[4px] shadow-sm active:shadow-none transition-all duration-300"
             >
               Записаться онлайн
             </Link>

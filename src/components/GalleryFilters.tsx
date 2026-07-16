@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import WarmImage from "@/components/UI/WarmImage";
 import { GALLERY_WORKS } from "@/constants/data";
 
 const FILTERS = [
@@ -29,7 +29,7 @@ export default function GalleryFilters() {
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key)}
-              className={`px-8 py-3 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer ${
+              className={`px-8 py-3 text-[10px] uppercase tracking-[0.12em] transition-all duration-300 cursor-pointer ${
                 isActive
                   ? "border-b border-brand-dark text-brand-dark"
                   : "border-b border-transparent text-brand-dark/50 hover:text-brand-dark"
@@ -50,7 +50,7 @@ export default function GalleryFilters() {
           >
             {/* Image Container */}
             <div className="relative aspect-[3/4] w-full mb-6">
-              <Image
+              <WarmImage
                 src={work.image}
                 alt={work.title}
                 fill
@@ -62,7 +62,7 @@ export default function GalleryFilters() {
 
             {/* Content */}
             <div className="flex flex-col gap-2">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-brand-accent">
+              <span className="text-[10px] uppercase tracking-[0.12em] text-brand-accent">
                 {FILTERS.find((f) => f.key === work.category)?.name}
               </span>
               <h4 className="font-serif-display text-2xl text-brand-dark">

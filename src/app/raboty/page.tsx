@@ -14,7 +14,7 @@ export default function GalleryPage() {
       {/* Hero Header */}
       <section className="pt-32 pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 mb-8">
+          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
             <span className="mx-4">/</span>
             <span className="text-brand-dark">Работы</span>

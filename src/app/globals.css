@@ -5,7 +5,9 @@
   --font-sans: var(--font-manrope);
   --color-brand-cream: #F7F3EE;
   --color-brand-dark: #1F1B16;
-  --color-brand-accent: #B98A5E;
+  --color-brand-brown: #2A211B;
+  --color-brand-caramel: #B08A5E;
+  --color-brand-accent: #B08A5E;
 }
 
 :root {
@@ -42,4 +44,17 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Warm Image Styling */
+.warm-img {
+  filter: sepia(0.18) saturate(0.8) brightness(1.03);
+}
+
+.warm-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(190, 160, 130, 0.10);
+  pointer-events: none;
+  z-index: 10;
 }

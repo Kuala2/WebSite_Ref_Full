@@ -28,7 +28,7 @@ export default function Footer() {
                 href={SALON_INFO.vkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors"
+                className="text-xs uppercase tracking-[0.12em] hover:text-brand-accent transition-colors"
                 aria-label="ВКонтакте"
               >
                 ВКонтакте
@@ -37,7 +37,7 @@ export default function Footer() {
                 href={SALON_INFO.tgUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors"
+                className="text-xs uppercase tracking-[0.12em] hover:text-brand-accent transition-colors"
                 aria-label="Telegram"
               >
                 Телеграм
@@ -47,13 +47,13 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-[10px] tracking-[0.2em] uppercase text-brand-accent mb-8">Навигация</h3>
+            <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-8">Навигация</h3>
             <ul className="space-y-4">
               {['Услуги', 'Работы', 'О салоне', 'Контакты'].map((item) => (
                 <li key={item}>
                   <Link 
                     href={`/${item === 'Работы' ? 'raboty' : item === 'Услуги' ? 'uslugi' : item === 'О салоне' ? 'o-salone' : 'kontakty'}`} 
-                    className="text-sm tracking-wide uppercase hover:text-brand-accent transition-colors"
+                    className="text-sm tracking-[0.12em] uppercase hover:text-brand-accent transition-colors"
                   >
                     {item}
                   </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
           {/* Contacts */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-[10px] tracking-[0.2em] uppercase text-brand-accent mb-4">Визит</h3>
+              <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-4">Визит</h3>
               <p className="text-sm font-light leading-relaxed">
                 {SALON_INFO.address}<br/>
                 <span className="text-brand-cream/50 mt-1 block">м. Горьковская (5 мин)</span>
@@ -73,7 +73,7 @@ export default function Footer() {
             </div>
             
             <div>
-              <h3 className="text-[10px] tracking-[0.2em] uppercase text-brand-accent mb-4">Связь</h3>
+              <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-4">Связь</h3>
               <a href={SALON_INFO.phoneLink} className="text-sm font-light hover:text-brand-accent transition-colors">
                 {SALON_INFO.phone}
               </a>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase text-brand-cream/30 space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.12em] uppercase text-brand-cream/30 space-y-4 md:space-y-0">
           <p>&copy; {currentYear} Салон красоты Стенс. Все права защищены.</p>
           <Link href="/privacy" className="hover:text-brand-accent transition-colors">
             Политика конфиденциальности

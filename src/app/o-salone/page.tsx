@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import WarmImage from "@/components/UI/WarmImage";
 import { MASTERS, REVIEWS } from "@/constants/data";
 import MasterCard from "@/components/UI/MasterCard";
 import ReviewCard from "@/components/UI/ReviewCard";
@@ -23,7 +23,7 @@ export default function AboutPage() {
       {/* Hero Header */}
       <section className="pt-32 pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 mb-8">
+          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
             <span className="mx-4">/</span>
             <span className="text-brand-dark">О салоне</span>
@@ -57,8 +57,8 @@ export default function AboutPage() {
             </div>
           </div>
           
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
-            <Image
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+            <WarmImage
               src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800"
               alt="Интерьер салона красоты Стенс на Большой Покровской"
               fill
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
             {/* Photos */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[4px]">
+                <WarmImage
                   src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=600"
                   alt="Материалы"
                   fill
@@ -85,8 +85,8 @@ export default function AboutPage() {
                   className="object-cover opacity-80"
                 />
               </div>
-              <div className="relative aspect-[3/4] mt-12 overflow-hidden rounded-2xl">
-                <Image
+              <div className="relative aspect-[3/4] mt-12 overflow-hidden rounded-[4px]">
+                <WarmImage
                   src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600"
                   alt="Стерилизация"
                   fill
@@ -152,9 +152,9 @@ export default function AboutPage() {
             {INTERIOR_PHOTOS.map((photo, index) => (
               <div
                 key={index}
-                className="relative aspect-[4/5] overflow-hidden rounded-2xl"
+                className="relative aspect-[4/5] overflow-hidden rounded-[4px]"
               >
-                <Image
+                <WarmImage
                   src={photo}
                   alt={`Интерьер салона красоты Стенс — Фото ${index + 1}`}
                   fill

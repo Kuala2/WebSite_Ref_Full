@@ -16,12 +16,12 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center px-10 py-4 text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 focus:outline-none min-h-[48px] cursor-pointer rounded-full shadow-sm hover:shadow-md transform hover:-translate-y-0.5 active:translate-y-0";
+    "inline-flex items-center justify-center px-[48px] py-[18px] text-xs md:text-sm font-bold uppercase tracking-[0.12em] transition-all duration-300 focus:outline-none cursor-pointer rounded-[4px] shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0";
   
   const variants = {
-    primary: "bg-brand-accent text-brand-cream hover:bg-[#A37851] border border-transparent",
-    secondary: "bg-brand-dark text-brand-cream hover:bg-brand-accent border border-transparent",
-    outline: "bg-transparent border border-brand-dark/20 text-brand-dark hover:border-brand-accent hover:text-brand-accent shadow-none hover:shadow-none hover:-translate-y-0",
+    primary: "bg-brand-caramel text-white hover:bg-[#9e7a50] border border-transparent",
+    secondary: "bg-brand-dark text-brand-cream hover:bg-brand-caramel border border-transparent",
+    outline: "bg-transparent border border-brand-dark/20 text-brand-dark hover:border-brand-caramel hover:text-brand-caramel shadow-none hover:shadow-none hover:-translate-y-1",
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;

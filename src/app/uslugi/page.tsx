@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import WarmImage from "@/components/UI/WarmImage";
 import { Metadata } from "next";
 import { SERVICES_DATA } from "@/constants/data";
 
@@ -14,7 +14,7 @@ export default function ServicesCatalogPage() {
       {/* Hero Header */}
       <section className="pt-32 pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.2em] text-brand-dark/50 mb-8">
+          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
             <span className="mx-4">/</span>
             <span className="text-brand-dark">Услуги</span>
@@ -37,9 +37,9 @@ export default function ServicesCatalogPage() {
               className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-24 items-center`}
             >
               {/* Image */}
-              <div className="w-full md:w-1/2 aspect-[3/4] relative overflow-hidden group rounded-2xl">
+              <div className="w-full md:w-1/2 aspect-[3/4] relative overflow-hidden group rounded-[4px]">
                 <Link href={`/uslugi/${service.slug}`}>
-                  <Image
+                  <WarmImage
                     src={service.image}
                     alt={`Стенс: ${service.title}`}
                     fill
@@ -51,7 +51,7 @@ export default function ServicesCatalogPage() {
 
               {/* Text */}
               <div className="w-full md:w-1/2 flex flex-col justify-center">
-                <span className="text-sm md:text-base font-semibold tracking-[0.2em] uppercase text-brand-accent mb-6">
+                <span className="text-sm md:text-base font-semibold tracking-[0.12em] uppercase text-brand-accent mb-6">
                   От {service.priceFrom}
                 </span>
                 <Link href={`/uslugi/${service.slug}`} className="group inline-block w-fit">
@@ -65,7 +65,7 @@ export default function ServicesCatalogPage() {
                 <div className="flex items-center gap-8">
                   <Link
                     href={`/uslugi/${service.slug}`}
-                    className="text-xs font-semibold uppercase tracking-[0.2em] border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all"
+                    className="text-xs font-semibold uppercase tracking-[0.12em] border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all"
                   >
                     Прайс-лист
                   </Link>
