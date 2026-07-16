@@ -35,10 +35,10 @@ export default function ContactsPage() {
             <span className="mx-4">/</span>
             <span className="text-brand-dark">Контакты</span>
           </nav>
-          <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-brand-dark mb-12">
+          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight text-brand-dark mb-12">
             Контакты
           </h1>
-          <p className="text-lg md:text-xl text-brand-dark/90 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-dark max-w-2xl mx-auto font-normal leading-relaxed">
             Исторический центр Нижнего Новгорода.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function ContactsPage() {
               <div>
                 <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-brand-accent mb-4">Салон «Стенс»</h4>
                 <p className="text-2xl md:text-3xl font-serif-display text-brand-dark leading-tight">{SALON_INFO.address}</p>
-                <p className="text-sm font-normal text-brand-dark/70 mt-4 block">
+                <p className="text-base font-medium text-brand-dark mt-4 block">
                   м. Горьковская (5 минут пешком)
                 </p>
               </div>
@@ -109,10 +109,10 @@ export default function ContactsPage() {
             
             <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-2xl shadow-sm">
               <h4 className="font-serif-display text-2xl text-brand-dark mb-4">Как добраться</h4>
-              <p className="text-sm md:text-base font-normal text-brand-dark/90 leading-relaxed mb-4">
+              <p className="text-sm md:text-base font-normal text-brand-dark leading-relaxed mb-4">
                 Салон расположен в историческом центре города, на пешеходной улице Большой Покровской.
               </p>
-              <ul className="text-sm md:text-base font-normal text-brand-dark/90 leading-relaxed list-disc list-inside space-y-2">
+              <ul className="text-sm md:text-base font-normal text-brand-dark leading-relaxed list-disc list-inside space-y-2">
                 <li><strong>От станции метро «Горьковская»:</strong> 5 минут пешком по улице Большая Покровская в сторону площади Минина.</li>
                 <li><strong>На автомобиле:</strong> парковка возможна на соседних улицах (ул. Малая Покровская, ул. Звездинка) по городскому тарифу.</li>
               </ul>
@@ -127,7 +127,7 @@ export default function ContactsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             <div className="md:col-span-1">
-              <h2 className="font-serif-display text-4xl md:text-6xl text-brand-dark">Правила визита</h2>
+              <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark">Правила визита</h2>
             </div>
             <div className="md:col-span-2">
               <Accordion items={CONTACT_FAQS} />

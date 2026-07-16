@@ -61,7 +61,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
             <span className="mx-4">/</span>
             <span className="text-brand-dark">{service.title}</span>
           </nav>
-          <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-brand-dark mb-12">
+          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight text-brand-dark mb-12">
             {service.title}
           </h1>
         </div>
@@ -85,7 +85,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
           <div>
-            <h2 className="font-serif-display text-4xl md:text-6xl text-brand-dark mb-12">
+            <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark mb-12">
               О процедуре
             </h2>
             <div className="pt-8">
@@ -95,7 +95,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
             </div>
           </div>
           
-          <div className="space-y-8 text-lg text-brand-dark/90 font-normal leading-relaxed">
+          <div className="space-y-8 text-lg text-brand-dark font-normal leading-relaxed">
             <p className="text-2xl md:text-3xl text-brand-dark font-serif-display leading-tight mb-12">
               {service.longDescription}
             </p>
@@ -151,7 +151,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       <section className="py-32 border-t border-brand-dark/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="font-serif-display text-4xl md:text-7xl text-brand-dark">Прайс-лист</h2>
+            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Прайс-лист</h2>
           </div>
           <PriceTable items={service.prices} />
         </div>
@@ -161,7 +161,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       <section className="py-32 border-t border-brand-dark/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-            <h2 className="font-serif-display text-4xl md:text-7xl text-brand-dark">Наши работы</h2>
+            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Наши работы</h2>
             <Link href="/raboty" className="text-[10px] tracking-[0.2em] uppercase border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all hidden md:block">
               Смотреть все
             </Link>
@@ -191,7 +191,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       <section className="py-32 border-t border-brand-dark/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-24">
-            <h2 className="font-serif-display text-4xl md:text-7xl text-brand-dark">Команда мастеров</h2>
+            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Команда мастеров</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {categoryMasters.map((master) => (
@@ -206,7 +206,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             <div className="md:col-span-1">
-              <h2 className="font-serif-display text-4xl md:text-6xl text-brand-dark">Частые вопросы</h2>
+              <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark">Частые вопросы</h2>
             </div>
             <div className="md:col-span-2">
               <Accordion items={service.faqs} />
@@ -218,7 +218,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
       {/* Final CTA */}
       <section className="py-32 bg-brand-dark text-brand-cream text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <h2 className="font-serif-display text-5xl md:text-8xl tracking-tighter">
+          <h2 className="font-serif-display text-4xl md:text-5xl tracking-tighter">
             Записаться
           </h2>
           <p className="text-xl md:text-2xl font-normal opacity-90 max-w-2xl mx-auto">

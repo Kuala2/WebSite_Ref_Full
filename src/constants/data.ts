@@ -85,14 +85,14 @@ export const TOP_SERVICES = [
     title: "Сложное окрашивание",
     description: "AirTouch, шатуш, балаяж и идеальный тотальный блонд без повреждения структуры волос.",
     priceFrom: "6 500 ₽",
-    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
     slug: "okrashivanie",
   },
   {
     title: "Стрижки и укладки",
     description: "Умные стрижки, которые не требуют долгой укладки, и стильные вечерние образы.",
     priceFrom: "1 500 ₽",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=800",
     slug: "strizhki",
   },
   {
@@ -163,7 +163,7 @@ export const MASTERS: Master[] = [
     role: "Топ-мастер ногтевого сервиса",
     experience: "10 лет",
     bio: "Профессионал в моделировании ногтей и решении эстетических проблем. Работает быстро и качественно, экономит ваше время.",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
     categories: ["manikyur-pedikyur"],
   },
 ];
@@ -249,7 +249,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "okrashivanie",
     description: "Сложные техники AirTouch, балаяж, шатуш, тотальный блонд и бережный уход за волосами от ведущих брендов.",
     longDescription: "Специалисты колористики салона «Стенс» работают на премиальных брендах Wella Professionals и Lebel. Мы бережно относимся к здоровью ваших волос, поэтому любое осветление сопровождается защитными комплексами Plex. Специализируемся на исправлении сложных случаев (пятна, полосы, нежелательные оттенки) и выводе из темного бытового красителя в чистый блонд.",
-    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=800",
     priceFrom: "3 500 ₽",
     prices: [
       { name: "Окрашивание в один тон (короткие волосы)", price: "от 3 500 ₽" },
@@ -282,11 +282,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["1", "2", "5"],
@@ -297,7 +294,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "strizhki",
     description: "Умные стрижки по форме лица, не требующие долгой укладки, дневные, коктейльные и вечерние прически.",
     longDescription: "В салоне «Стенс» мы создаем стрижки, которые подчеркивают вашу индивидуальность и легки в повседневной жизни. Мы детально изучаем структуру волос, направление их роста и форму лица. В стоимость любой стрижки уже входит мытье головы с массажем и профессиональный стайлинг. Также мы создаем шикарные локоны и прически для особых случаев.",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 000 ₽",
     prices: [
       { name: "Женская стрижка (короткие волосы)", price: "1 500 ₽" },
@@ -326,12 +323,9 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
     gallery: [
+      "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["1", "2", "5"],
   },
@@ -341,7 +335,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "manikyur-pedikyur",
     description: "Безопасный аппаратный и комбинированный маникюр, педикюр SMART, укрепление и трендовые дизайны.",
     longDescription: "Студия ногтевого сервиса в «Стенс» — это прежде всего безопасность. Мы используем только стерильные инструменты в крафт-пакетах и одноразовые расходники (пилочки, бафы, апельсиновые палочки). Выполняем качественное выравнивание ногтевой пластины и покрытие под кутикулу, которое носится без отслоек до 4 недель. SMART-педикюр избавит от трещин и шероховатостей без лезвий и боли.",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 200 ₽",
     prices: [
       { name: "Комбинированный маникюр (без покрытия)", price: "1 200 ₽" },
@@ -372,12 +366,9 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["3", "6"],
   },
@@ -387,7 +378,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "permanent",
     description: "Пудровые брови, акварельные губы, межресничка. Оформление бровей и ламинирование ресниц.",
     longDescription: "Перманентный макияж в салоне «Стенс» — это ювелирная работа с вашей естественной красотой. Мы против неестественных плотных «татуировок» на лице. Алена Волкова создает деликатные теневые растушевки (пудровое напыление бровей) и акварельные бесконтурные губы. Используем только гипоаллергенные сертифицированные пигменты премиум-класса. Также предлагаем услуги бровиста: архитектура, окрашивание и ламинирование.",
-    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 200 ₽",
     prices: [
       { name: "Оформление бровей (воск / пинцет)", price: "600 ₽" },
@@ -420,55 +411,31 @@ export const SERVICES_DATA: ServiceDetail[] = [
       },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1588636186851-f4044cda6da3?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["4"],
   },
 ];
 
 export const GALLERY_WORKS = [
-  // Okrashivanie
   {
     category: "okrashivanie",
     title: "AirTouch окрашивание",
     description: "Коррекция сложного блонда с плавным переходом от корней",
-    image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "okrashivanie",
     title: "Тотальный холодный блонд",
     description: "Осветление корней и бережное тонирование Lebel",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    category: "okrashivanie",
-    title: "Карамельный балаяж",
-    description: "Мягкие блики на русых волосах",
     image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
   },
-  {
-    category: "okrashivanie",
-    title: "Шоколадный однотонный глянец",
-    description: "Окрашивание Wella Koleston + уход Абсолютное Счастье",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
-  },
-  
-  // Strizhki
   {
     category: "strizhki",
     title: "Текстурное каре",
     description: "Умная стрижка по форме лица, легкая укладка",
-    image: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    category: "strizhki",
-    title: "Длинный каскад",
-    description: "Оформление объема у лица и легкая волна",
     image: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=600",
   },
   {
@@ -478,55 +445,21 @@ export const GALLERY_WORKS = [
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600",
   },
   {
-    category: "strizhki",
-    title: "Голливудская волна",
-    description: "Вечерняя укладка на плойку для особого мероприятия",
-    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600",
-  },
-
-  // Nogti (manikyur-pedikyur)
-  {
     category: "nogti",
     title: "Нюдовый минимализм",
     description: "Выравнивание базой, чистый комбинированный маникюр",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "nogti",
     title: "Элегантный французский маникюр",
     description: "Идеальная линия улыбки на миндалевидной форме",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    category: "nogti",
-    title: "Глянцевый красный классик",
-    description: "Покрытие Luxio под кутикулу, идеальные блики",
     image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=600",
   },
-  {
-    category: "nogti",
-    title: "Матовый графит с дизайном",
-    description: "Трендовая геометрия и укрепление акригелем",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
-  },
-
-  // Brovi (permanent / brows)
   {
     category: "brovi",
     title: "Пудровые брови сразу после процедуры",
     description: "Теневой пиксельный эффект, форма по золотому сечению",
-    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    category: "brovi",
-    title: "Акварельный перманент губ",
-    description: "Естественный оттенок пыльной розы, бесконтурная техника",
-    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    category: "brovi",
-    title: "Долговременная укладка бровей",
-    description: "Архитектура, укладка Thuya и окрашивание краской",
     image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=600",
   },
   {

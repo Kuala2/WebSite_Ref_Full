@@ -19,10 +19,10 @@ export default function ServicesCatalogPage() {
             <span className="mx-4">/</span>
             <span className="text-brand-dark">Услуги</span>
           </nav>
-          <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-brand-dark mb-12">
+          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight text-brand-dark mb-12">
             Услуги и цены
           </h1>
-          <p className="text-lg md:text-xl text-brand-dark/90 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-dark max-w-2xl mx-auto font-normal leading-relaxed">
             Безупречность в каждой детали. Индивидуальный подход и премиальные материалы.
           </p>
         </div>
@@ -55,11 +55,11 @@ export default function ServicesCatalogPage() {
                   От {service.priceFrom}
                 </span>
                 <Link href={`/uslugi/${service.slug}`} className="group inline-block w-fit">
-                  <h2 className="font-serif-display text-4xl md:text-6xl text-brand-dark mb-8 group-hover:text-brand-accent transition-colors">
+                  <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark mb-8 group-hover:text-brand-accent transition-colors">
                     {service.title}
                   </h2>
                 </Link>
-                <p className="text-lg text-brand-dark/90 font-normal leading-relaxed mb-12 max-w-md">
+                <p className="text-lg text-brand-dark font-normal leading-relaxed mb-12 max-w-md">
                   {service.description}
                 </p>
                 <div className="flex items-center gap-8">
@@ -81,19 +81,19 @@ export default function ServicesCatalogPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
           <div className="space-y-6">
             <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Стерилизация</h4>
-            <p className="text-sm md:text-base text-brand-dark/90 leading-relaxed font-normal">
+            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
               Медицинские стандарты стерилизации. Крафт-пакеты вскрываются исключительно при вас.
             </p>
           </div>
           <div className="space-y-6">
             <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Материалы</h4>
-            <p className="text-sm md:text-base text-brand-dark/90 leading-relaxed font-normal">
+            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
               Мы используем только премиальные красители Wella Professionals и японские уходы Lebel.
             </p>
           </div>
           <div className="space-y-6">
             <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Экспертность</h4>
-            <p className="text-sm md:text-base text-brand-dark/90 leading-relaxed font-normal">
+            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
               Бесплатная очная консультация перед сложным окрашиванием для гарантии результата.
             </p>
           </div>
