@@ -48,7 +48,7 @@ body {
 
 /* Warm Image Styling */
 .warm-img {
-  filter: sepia(0.18) saturate(0.8) brightness(1.03);
+  filter: sepia(0.15) saturate(0.85);
 }
 
 .warm-overlay {

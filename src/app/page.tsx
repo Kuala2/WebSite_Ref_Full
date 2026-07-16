@@ -11,8 +11,8 @@ export default function HomePage() {
   const previewReviews = REVIEWS.slice(0, 3);
   const previewWorks = [
     "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800",
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function HomePage() {
       <section className="relative w-full min-h-[100svh] flex items-center pt-24 pb-12 overflow-hidden">
         <div className="absolute top-0 right-0 w-3/4 md:w-1/2 h-full z-0">
           <WarmImage
-            src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=1600"
+            src="https://images.unsplash.com/photo-1521590832167-7bfc1738d0e7?auto=format&fit=crop&q=80&w=1600"
             alt="Стенс - Премиальный салон красоты"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -97,9 +97,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. TOP SERVICES (EDITORIAL CAROUSEL / MASONRY) */}
-      <section className="py-32 md:py-48 bg-brand-brown text-brand-cream relative">
-        <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-brand-cream to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-brand-cream to-transparent pointer-events-none" />
+      <section className="py-32 md:py-48 bg-brand-brown text-brand-cream">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24 md:mb-32">
             <h2 className="font-serif-display text-4xl md:text-5xl">

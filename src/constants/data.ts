@@ -41,8 +41,8 @@ export const SALON_INFO = {
   name: "Стенс",
   address: "Нижний Новгород, ул. Большая Покровская, 58",
   locationNote: "5 минут от станции метро «Горьковская», вход со двора через арку",
-  phone: "8 (831) 000-00-00",
-  phoneLink: "tel:+78310000000",
+  phone: "8 (831) 283-54-12",
+  phoneLink: "tel:+78312835412",
   scheduleWeekdays: "пн–пт 10:00–20:00",
   scheduleWeekends: "сб–вс 10:00–18:00",
   established: 2018,
@@ -77,7 +77,7 @@ export const TOP_SERVICES = [
     title: "Сложное окрашивание",
     description: "AirTouch, шатуш, балаяж и идеальный тотальный блонд без повреждения структуры волос.",
     priceFrom: "6 500 ₽",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
     slug: "okrashivanie",
   },
   {
@@ -137,7 +137,7 @@ export const MASTERS: Master[] = [
     role: "Мастер перманентного макияжа и бровист",
     experience: "8 лет",
     bio: "Сторонница естественного результата. Делает воздушный перманент бровей в пудровой технике и сочные акварельные губы без эффекта пластилина.",
-    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
     categories: ["permanent"],
   },
   {
@@ -146,7 +146,7 @@ export const MASTERS: Master[] = [
     role: "Стилист по волосам",
     experience: "10 лет",
     bio: "Мастер вечерних причесок и укладок любой сложности. Знает все секреты объема, который держится весь день и всю ночь.",
-    image: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
     categories: ["strizhki"],
   },
   {
@@ -155,7 +155,7 @@ export const MASTERS: Master[] = [
     role: "Топ-мастер ногтевого сервиса",
     experience: "10 лет",
     bio: "Профессионал в моделировании ногтей и решении эстетических проблем. Работает быстро и качественно, экономит ваше время.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1554727242-741c14fa561c?auto=format&fit=crop&q=80&w=600",
     categories: ["manikyur-pedikyur"],
   },
 ];
@@ -317,7 +317,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     gallery: [
       "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600",
       "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600",
     ],
     masters: ["1", "2", "5"],
   },
@@ -370,7 +370,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "permanent",
     description: "Пудровые брови, акварельные губы, межресничка. Оформление бровей и ламинирование ресниц.",
     longDescription: "Перманентный макияж в салоне «Стенс» — это ювелирная работа с вашей естественной красотой. Мы против неестественных плотных «татуировок» на лице. Алена Волкова создает деликатные теневые растушевки (пудровое напыление бровей) и акварельные бесконтурные губы. Используем только гипоаллергенные сертифицированные пигменты премиум-класса. Также предлагаем услуги бровиста: архитектура, окрашивание и ламинирование.",
-    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1599580456185-1d02c918a099?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 200 ₽",
     prices: [
       { name: "Оформление бровей (воск / пинцет)", price: "600 ₽" },
@@ -416,13 +416,13 @@ export const GALLERY_WORKS = [
     category: "okrashivanie",
     title: "AirTouch окрашивание",
     description: "Коррекция сложного блонда с плавным переходом от корней",
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "okrashivanie",
     title: "Тотальный холодный блонд",
     description: "Осветление корней и бережное тонирование Lebel",
-    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "strizhki",
@@ -440,7 +440,7 @@ export const GALLERY_WORKS = [
     category: "nogti",
     title: "Нюдовый минимализм",
     description: "Выравнивание базой, чистый комбинированный маникюр",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "nogti",
@@ -452,12 +452,12 @@ export const GALLERY_WORKS = [
     category: "brovi",
     title: "Пудровые брови сразу после процедуры",
     description: "Теневой пиксельный эффект, форма по золотому сечению",
-    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1599580456185-1d02c918a099?auto=format&fit=crop&q=80&w=600",
   },
   {
     category: "brovi",
     title: "Ламинирование ресниц с ботоксом",
     description: "Красивый естественный завиток, лифтинг-эффект и блеск",
-    image: "https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1583001931096-959e9a5a62fe?auto=format&fit=crop&q=80&w=600",
   },
 ];

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const INTERIOR_PHOTOS = [
   "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
   "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=800",
+  "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800",
 ];
 
 export default function AboutPage() {
@@ -74,26 +74,15 @@ export default function AboutPage() {
       <section className="py-32 bg-brand-dark text-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
-            {/* Photos */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[4px]">
+            {/* Photo */}
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[4px]">
                 <WarmImage
-                  src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=600"
-                  alt="Материалы"
+                  src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800"
+                  alt="Стерилизация и материалы"
                   fill
-                  sizes="30vw"
-                  className="object-cover opacity-80"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover opacity-90"
                 />
-              </div>
-              <div className="relative aspect-[3/4] mt-12 overflow-hidden rounded-[4px]">
-                <WarmImage
-                  src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600"
-                  alt="Стерилизация"
-                  fill
-                  sizes="30vw"
-                  className="object-cover opacity-80"
-                />
-              </div>
             </div>
 
             {/* Text Info */}
