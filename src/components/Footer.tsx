@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Giant Text */}
         <div className="mb-24 md:mb-32">
           <h2 className="font-serif-display text-[15vw] md:text-[12rem] leading-[0.8] tracking-tighter">
-            Stens<span className="text-brand-accent">.</span>
+            Стенс
           </h2>
         </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                 className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors"
                 aria-label="ВКонтакте"
               >
-                VKONTAKTE
+                ВКонтакте
               </a>
               <a
                 href={SALON_INFO.tgUrl}
@@ -40,7 +40,7 @@ export default function Footer() {
                 className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors"
                 aria-label="Telegram"
               >
-                TELEGRAM
+                Телеграм
               </a>
             </div>
           </div>
@@ -84,9 +84,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase text-brand-cream/30 space-y-4 md:space-y-0">
-          <p>&copy; {currentYear} STENS SALON. ALL RIGHTS RESERVED.</p>
+          <p>&copy; {currentYear} Салон красоты Стенс. Все права защищены.</p>
           <Link href="/privacy" className="hover:text-brand-accent transition-colors">
-            PRIVACY POLICY
+            Политика конфиденциальности
           </Link>
         </div>
       </div>

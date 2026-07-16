@@ -31,7 +31,7 @@ export default function Header() {
               className="font-serif-display text-4xl font-bold text-brand-dark tracking-tight hover:text-brand-accent transition-colors"
               onClick={handleLinkClick}
             >
-              Stens.
+              Стенс
             </Link>
           </div>
 
@@ -79,7 +79,7 @@ export default function Header() {
               className="inline-flex items-center justify-center p-2 text-brand-dark min-h-[44px] min-w-[44px]"
               aria-expanded={isOpen}
             >
-              <span className="sr-only">Menu</span>
+              <span className="sr-only">Меню</span>
               {isOpen ? (
                 <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />

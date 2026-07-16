@@ -29,7 +29,7 @@ export default function AboutPage() {
             <span className="text-brand-dark">О салоне</span>
           </nav>
           <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-brand-dark mb-12">
-            Философия.
+            О салоне
           </h1>
           <p className="text-lg md:text-xl text-brand-dark/90 max-w-2xl mx-auto font-normal leading-relaxed">
             Создаем премиальный сервис и раскрываем вашу естественную красоту.
@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
           <div className="space-y-8">
             <h2 className="font-serif-display text-4xl md:text-6xl text-brand-dark">
-              Как создавался «Стенс».
+              Как создавался «Стенс»
             </h2>
             <div className="space-y-6 text-lg text-brand-dark/90 font-normal leading-relaxed">
               <p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <div className="space-y-16">
               <div>
                 <h3 className="font-serif-display text-4xl mb-6">
-                  Безопасность.
+                  Безопасность
                 </h3>
                 <p className="text-lg text-brand-cream/90 font-normal leading-relaxed">
                   Мы бережно относимся к вашему здоровью. В салоне «Стенс» все многоразовые инструменты ногтевого сервиса проходят трехэтапную очистку: дезинфекция, промывка и термическая стерилизация в сухожаровом шкафу при 180°C. Крафт-пакет вскрывается мастером исключительно в вашем присутствии.
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
               <div>
                 <h3 className="font-serif-display text-4xl mb-6">
-                  Косметика.
+                  Косметика
                 </h3>
                 <p className="text-lg text-brand-cream/90 font-normal leading-relaxed">
                   В окрашивании мы используем только качественные профессиональные материалы Wella Professionals и Lebel. Мы принципиально не экономим на материалах, ведь от них зависит здоровье волос, блеск и стойкость оттенка.
@@ -125,7 +125,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="font-serif-display text-5xl md:text-7xl text-brand-dark mb-6">
-              Команда.
+              Команда мастеров
             </h2>
             <p className="text-lg text-brand-dark/90 max-w-2xl mx-auto font-normal">
               Профессионалы своего дела с опытом от 8 лет.
@@ -145,7 +145,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="font-serif-display text-5xl md:text-7xl text-brand-dark">
-              Интерьер.
+              Наш интерьер
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -172,7 +172,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <h2 className="font-serif-display text-5xl md:text-7xl text-brand-dark mb-6">
-              Отзывы.
+              Отзывы клиентов
             </h2>
           </div>
 
@@ -187,7 +187,7 @@ export default function AboutPage() {
       {/* CTA section */}
       <section className="py-32 border-t border-brand-dark/10">
         <div className="px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
-          <h3 className="font-serif-display text-4xl md:text-6xl text-brand-dark mb-8">Испытайте премиум сервис.</h3>
+          <h3 className="font-serif-display text-4xl md:text-6xl text-brand-dark mb-8">Испытайте премиум сервис</h3>
           <p className="text-lg text-brand-dark/90 font-normal mb-12">
             Запишитесь онлайн прямо сейчас и получите гарантированную скидку 10% на ваш первый визит.
           </p>

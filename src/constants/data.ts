@@ -85,28 +85,28 @@ export const TOP_SERVICES = [
     title: "Сложное окрашивание",
     description: "AirTouch, шатуш, балаяж и идеальный тотальный блонд без повреждения структуры волос.",
     priceFrom: "6 500 ₽",
-    image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
     slug: "okrashivanie",
   },
   {
     title: "Стрижки и укладки",
     description: "Умные стрижки, которые не требуют долгой укладки, и стильные вечерние образы.",
     priceFrom: "1 500 ₽",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
     slug: "strizhki",
   },
   {
     title: "Маникюр и педикюр",
     description: "Безупречная обработка, выравнивание ногтевой пластины и стойкое покрытие гель-лаком.",
     priceFrom: "1 900 ₽",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800",
     slug: "manikyur-pedikyur",
   },
   {
     title: "Перманентный макияж",
     description: "Естественный перманент бровей, губ и межресничного пространства на срок до 2 лет.",
     priceFrom: "9 000 ₽",
-    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800",
     slug: "permanent",
   },
 ];
@@ -118,7 +118,7 @@ export const MASTERS: Master[] = [
     role: "Ведущий стилист-колорист",
     experience: "11 лет",
     bio: "Эксперт в сложных техниках окрашивания: AirTouch, шатуш и исправлении чужих ошибок. Сделает безупречный блонд, сохранив качество волос.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=600",
     categories: ["okrashivanie", "strizhki"],
   },
   {
@@ -127,7 +127,7 @@ export const MASTERS: Master[] = [
     role: "Топ-стилист, парикмахер",
     experience: "9 лет",
     bio: "Создает умные женские стрижки, идеально подходящие под ваш тип лица и текстуру волос. Специалист по уходам и восстановлению Lebel.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600",
     categories: ["strizhki", "okrashivanie"],
   },
   {
@@ -136,7 +136,7 @@ export const MASTERS: Master[] = [
     role: "Мастер ногтевого сервиса",
     experience: "8 лет",
     bio: "Специализируется на чистом аппаратном маникюре, идеальных бликах и смарт-педикюре. Воплотит любой дизайн от минимализма до френча.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=600",
     categories: ["manikyur-pedikyur"],
   },
   {
@@ -145,7 +145,7 @@ export const MASTERS: Master[] = [
     role: "Мастер перманентного макияжа и бровист",
     experience: "8 лет",
     bio: "Сторонница естественного результата. Делает воздушный перманент бровей в пудровой технике и сочные акварельные губы без эффекта пластилина.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&q=80&w=600",
     categories: ["permanent"],
   },
   {
@@ -154,7 +154,7 @@ export const MASTERS: Master[] = [
     role: "Стилист по волосам",
     experience: "10 лет",
     bio: "Мастер вечерних причесок и укладок любой сложности. Знает все секреты объема, который держится весь день и всю ночь.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?auto=format&fit=crop&q=80&w=600",
     categories: ["strizhki"],
   },
   {
@@ -163,7 +163,7 @@ export const MASTERS: Master[] = [
     role: "Топ-мастер ногтевого сервиса",
     experience: "10 лет",
     bio: "Профессионал в моделировании ногтей и решении эстетических проблем. Работает быстро и качественно, экономит ваше время.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=600",
     categories: ["manikyur-pedikyur"],
   },
 ];
@@ -249,7 +249,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "okrashivanie",
     description: "Сложные техники AirTouch, балаяж, шатуш, тотальный блонд и бережный уход за волосами от ведущих брендов.",
     longDescription: "Специалисты колористики салона «Стенс» работают на премиальных брендах Wella Professionals и Lebel. Мы бережно относимся к здоровью ваших волос, поэтому любое осветление сопровождается защитными комплексами Plex. Специализируемся на исправлении сложных случаев (пятна, полосы, нежелательные оттенки) и выводе из темного бытового красителя в чистый блонд.",
-    image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1595476108010-b4d1f10d5e42?auto=format&fit=crop&q=80&w=800",
     priceFrom: "3 500 ₽",
     prices: [
       { name: "Окрашивание в один тон (короткие волосы)", price: "от 3 500 ₽" },
@@ -297,7 +297,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "strizhki",
     description: "Умные стрижки по форме лица, не требующие долгой укладки, дневные, коктейльные и вечерние прически.",
     longDescription: "В салоне «Стенс» мы создаем стрижки, которые подчеркивают вашу индивидуальность и легки в повседневной жизни. Мы детально изучаем структуру волос, направление их роста и форму лица. В стоимость любой стрижки уже входит мытье головы с массажем и профессиональный стайлинг. Также мы создаем шикарные локоны и прически для особых случаев.",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 000 ₽",
     prices: [
       { name: "Женская стрижка (короткие волосы)", price: "1 500 ₽" },
@@ -341,7 +341,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "manikyur-pedikyur",
     description: "Безопасный аппаратный и комбинированный маникюр, педикюр SMART, укрепление и трендовые дизайны.",
     longDescription: "Студия ногтевого сервиса в «Стенс» — это прежде всего безопасность. Мы используем только стерильные инструменты в крафт-пакетах и одноразовые расходники (пилочки, бафы, апельсиновые палочки). Выполняем качественное выравнивание ногтевой пластины и покрытие под кутикулу, которое носится без отслоек до 4 недель. SMART-педикюр избавит от трещин и шероховатостей без лезвий и боли.",
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 200 ₽",
     prices: [
       { name: "Комбинированный маникюр (без покрытия)", price: "1 200 ₽" },
@@ -387,7 +387,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "permanent",
     description: "Пудровые брови, акварельные губы, межресничка. Оформление бровей и ламинирование ресниц.",
     longDescription: "Перманентный макияж в салоне «Стенс» — это ювелирная работа с вашей естественной красотой. Мы против неестественных плотных «татуировок» на лице. Алена Волкова создает деликатные теневые растушевки (пудровое напыление бровей) и акварельные бесконтурные губы. Используем только гипоаллергенные сертифицированные пигменты премиум-класса. Также предлагаем услуги бровиста: архитектура, окрашивание и ламинирование.",
-    image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800",
     priceFrom: "1 200 ₽",
     prices: [
       { name: "Оформление бровей (воск / пинцет)", price: "600 ₽" },

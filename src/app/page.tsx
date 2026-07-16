@@ -22,7 +22,7 @@ export default function HomePage() {
       <section className="relative w-full min-h-[100svh] flex items-center pt-24 pb-12 overflow-hidden">
         <div className="absolute top-0 right-0 w-3/4 md:w-1/2 h-full z-0">
           <Image
-            src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=1200"
+            src="https://images.unsplash.com/photo-1521590832167-7bfc17484d80?auto=format&fit=crop&q=80&w=1600"
             alt="Стенс - Премиальный салон красоты"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -35,13 +35,16 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
-            <h1 className="font-serif-display text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8 md:mb-12">
-              Stens<span className="text-brand-accent">.</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-brand-accent font-semibold mb-4 block">
+              Искусство преображения
+            </span>
+            <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-8 md:mb-12">
+              Салон красоты Стенс
             </h1>
             
             <div className="md:ml-4 space-y-8 max-w-xl">
-              <p className="text-xl md:text-3xl font-normal text-brand-dark/90 leading-relaxed">
-                Искусство преображения.
+              <p className="text-lg md:text-xl font-normal text-brand-dark/90 leading-relaxed">
+                Сложное окрашивание, стрижки, маникюр и перманентный макияж в центре Нижнего Новгорода
               </p>
               
               <div className="flex flex-col sm:flex-row gap-8 pt-4">
@@ -63,7 +66,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
           <div className="md:col-span-4">
             <h2 className="font-serif-display text-5xl md:text-7xl sticky top-32">
-              Философия<br/>заботы.
+              Почему выбирают Стенс
             </h2>
           </div>
           
@@ -90,7 +93,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24 md:mb-32">
             <h2 className="font-serif-display text-5xl md:text-8xl">
-              Услуги.
+              Услуги и цены
             </h2>
             <Link href="/uslugi" className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
               Посмотреть меню &rarr;
@@ -136,7 +139,7 @@ export default function HomePage() {
       <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-24 text-center">
           <h2 className="font-serif-display text-5xl md:text-8xl mb-12">
-            Портфолио.
+            Наши работы
           </h2>
           <Button href="/raboty" variant="outline">
             Смотреть галерею
@@ -145,14 +148,14 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 h-[150vh] md:h-[100svh]">
           <div className="relative md:col-span-7 h-full overflow-hidden group rounded-2xl">
-             <Image src={previewWorks[0]} alt="Work 1" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+             <Image src={previewWorks[0]} alt="Окрашивание блонд в салоне Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
           </div>
           <div className="md:col-span-5 flex flex-col gap-4 md:gap-8 h-full">
             <div className="relative h-1/2 overflow-hidden group rounded-2xl">
-              <Image src={previewWorks[1]} alt="Work 2" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <Image src={previewWorks[1]} alt="Маникюр с покрытием" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
             </div>
             <div className="relative h-1/2 overflow-hidden group rounded-2xl">
-              <Image src={previewWorks[2]} alt="Work 3" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <Image src={previewWorks[2]} alt="Стильная женская стрижка" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
             </div>
           </div>
         </div>
@@ -163,7 +166,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24">
             <h2 className="font-serif-display text-5xl md:text-8xl">
-              Стилисты.
+              Команда мастеров
             </h2>
             <Link href="/o-salone" className="text-[10px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
               Вся команда &rarr;
@@ -185,7 +188,7 @@ export default function HomePage() {
             
             {/* Reviews */}
             <div>
-              <h2 className="font-serif-display text-5xl md:text-6xl mb-16">Мнения.</h2>
+              <h2 className="font-serif-display text-5xl md:text-6xl mb-16">Отзывы клиентов</h2>
               <div className="flex flex-col">
                 {previewReviews.map((review) => (
                   <ReviewCard key={review.id} review={review} />
@@ -195,7 +198,7 @@ export default function HomePage() {
 
             {/* FAQ */}
             <div>
-              <h2 className="font-serif-display text-5xl md:text-6xl mb-16">Вопросы.</h2>
+              <h2 className="font-serif-display text-5xl md:text-6xl mb-16">Частые вопросы</h2>
               <Accordion items={MAIN_FAQS} />
             </div>
 
@@ -206,7 +209,7 @@ export default function HomePage() {
       {/* 7. CTA (GIANT TEXT) */}
       <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         <h2 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight mb-16 hover:text-brand-accent transition-colors duration-500">
-          <a href="/kontakty#zapis">Начать<br/>преображение.</a>
+          <a href="/kontakty#zapis">Запишитесь на удобное время</a>
         </h2>
         
         <div className="flex flex-col sm:flex-row gap-8 items-center">

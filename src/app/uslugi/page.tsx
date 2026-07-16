@@ -20,7 +20,7 @@ export default function ServicesCatalogPage() {
             <span className="text-brand-dark">Услуги</span>
           </nav>
           <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-brand-dark mb-12">
-            Направления.
+            Услуги и цены
           </h1>
           <p className="text-lg md:text-xl text-brand-dark/90 max-w-2xl mx-auto font-normal leading-relaxed">
             Безупречность в каждой детали. Индивидуальный подход и премиальные материалы.
