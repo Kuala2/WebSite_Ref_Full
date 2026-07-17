@@ -7,15 +7,15 @@ interface MasterCardProps {
 
 export default function MasterCard({ master }: MasterCardProps) {
   return (
-    <div className="flex flex-col group w-full">
+    <div className="flex flex-col group w-full transition-all duration-300 hover:-translate-y-[6px] hover:shadow-xl bg-brand-cream rounded-sm p-4 -m-4">
       {/* Photo Container */}
-      <div className="relative aspect-[4/5] w-full mb-8 overflow-hidden rounded-[4px]">
+      <div className="relative aspect-[4/5] w-full mb-8 overflow-hidden rounded-sm">
         <WarmImage
           src={master.image}
           alt={`Мастер салона красоты Стенс: ${master.name}`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-all duration-700"
+          className="object-cover transition-all duration-700 group-hover:scale-[1.03]"
           priority={false}
         />
       </div>
@@ -31,7 +31,7 @@ export default function MasterCard({ master }: MasterCardProps) {
           </span>
         </div>
         
-        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent mt-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-bordeaux mt-2">
           {master.role}
         </p>
         

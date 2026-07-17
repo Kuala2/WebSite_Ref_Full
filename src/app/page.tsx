@@ -18,44 +18,38 @@ export default function HomePage() {
   return (
     <div className="w-full bg-brand-cream text-brand-dark selection:bg-brand-accent selection:text-white">
       
-      {/* 1. HERO SECTION (EDITORIAL) */}
-      <section className="relative w-full min-h-[100svh] flex items-center pt-24 pb-12 overflow-hidden">
-        <div className="absolute top-0 right-0 w-3/4 md:w-1/2 h-full z-0">
+      {/* 1. HERO SECTION (EDITORIAL FULL-BLEED) */}
+      <section className="relative w-full min-h-[100svh] flex flex-col justify-end pb-12 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <WarmImage
-            src="https://images.unsplash.com/photo-1521590832167-7bfc1738d0e7?auto=format&fit=crop&q=80&w=1600"
+            src="https://images.unsplash.com/photo-1521590832167-7bfc1738d0e7?auto=format&fit=crop&q=80&w=2000"
             alt="Стенс - Премиальный салон красоты"
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-left-top opacity-90"
+            sizes="100vw"
+            className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-cream via-brand-cream/90 to-transparent md:hidden" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-cream/80 via-brand-cream/50 to-transparent hidden md:block" />
+          <div className="absolute inset-0 bg-brand-dark/20 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent opacity-90" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-[0.12em] text-brand-accent font-semibold mb-4 block">
-              Искусство преображения
-            </span>
-            <h1 className="font-serif-display text-[clamp(72px,9vw,140px)] leading-[0.9] tracking-tight mb-8 md:mb-12">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex flex-col gap-6 md:gap-12 text-brand-cream">
+            <h1 className="font-serif-display text-[clamp(90px,14vw,250px)] leading-[0.8] tracking-[-0.03em] uppercase">
               Стенс
             </h1>
             
-            <div className="md:ml-4 space-y-8 max-w-xl">
-              <p className="text-lg md:text-xl font-medium text-brand-dark leading-relaxed">
-                Сложное окрашивание, стрижки, маникюр и перманентный макияж в центре Нижнего Новгорода
+            <div className="flex flex-col md:flex-row gap-8 justify-between items-start md:items-end">
+              <p className="text-xl md:text-3xl font-medium max-w-2xl leading-tight">
+                Премиальный сервис и <span className="font-italic-accent text-brand-bordeaux">эстетика</span> в каждой детали
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-8 pt-4 items-center sm:items-start">
-                <Button href="/kontakty#zapis" variant="primary" className="px-10 py-5 text-lg">
-                  Записаться
-                </Button>
-                <div className="flex flex-col justify-center text-sm font-semibold tracking-[0.12em] uppercase text-brand-dark gap-2">
-                  <span>{SALON_INFO.address}</span>
-                  <span className="text-brand-accent">★ {SALON_INFO.rating} / {SALON_INFO.reviewsCount} отзывов</span>
-                </div>
-              </div>
+              <Link 
+                href="/kontakty#zapis" 
+                className="bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-12 py-5 text-lg md:text-xl font-medium transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
+              >
+                Записаться
+              </Link>
             </div>
           </div>
         </div>
@@ -68,7 +62,7 @@ export default function HomePage() {
             <h2 className="font-serif-display text-4xl md:text-5xl sticky top-32">
               Почему выбирают Стенс
             </h2>
-            <div className="relative w-full aspect-[3/4] hidden md:block rounded-[4px] overflow-hidden mt-8">
+            <div className="relative w-full aspect-[3/4] hidden md:block rounded-sm overflow-hidden mt-8">
               <WarmImage 
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" 
                 alt="Интерьер салона красоты Стенс" 
@@ -78,16 +72,13 @@ export default function HomePage() {
             </div>
           </div>
           
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-16">
+          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-24">
             {ADVANTAGES.map((adv, idx) => (
               <div key={idx} className="flex flex-col gap-6">
-                <span className="font-serif-display text-[56px] leading-none text-brand-caramel/35">
-                  0{idx + 1}
-                </span>
-                <h3 className="font-serif-display text-3xl">
+                <h3 className="font-serif-display text-4xl md:text-5xl leading-tight">
                   {adv.title}
                 </h3>
-                <p className="text-lg text-brand-dark font-medium leading-relaxed">
+                <p className="text-xl text-brand-dark font-medium leading-relaxed opacity-80">
                   {adv.description}
                 </p>
               </div>
@@ -97,7 +88,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. TOP SERVICES (EDITORIAL CAROUSEL / MASONRY) */}
-      <section className="py-32 md:py-48 bg-brand-brown text-brand-cream">
+      <section className="py-32 md:py-48 bg-brand-dark text-brand-cream noise-bg">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24 md:mb-32">
             <h2 className="font-serif-display text-4xl md:text-5xl">
@@ -111,7 +102,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-x-16 md:gap-y-48">
             {TOP_SERVICES.map((service, idx) => (
               <div key={idx} className={`group flex flex-col ${idx % 2 !== 0 ? 'md:mt-32' : ''}`}>
-                <div className="relative aspect-[3/4] w-full mb-12 rounded-[4px] overflow-hidden">
+                <div className="relative aspect-[3/4] w-full mb-12 rounded-sm overflow-hidden">
                   <WarmImage
                     src={service.image}
                     alt={service.title}
@@ -143,20 +134,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. GALLERY (ASYMMETRICAL) */}
-      <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-24 text-center">
+      {/* 4. GALLERY (FULL BLEED) */}
+      <section className="pt-32 pb-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 text-center">
           <h2 className="font-serif-display text-4xl md:text-5xl mb-12">
             Наши работы
           </h2>
-          <Button href="/raboty" variant="outline">
+          <Link href="/raboty" className="inline-block border border-brand-dark/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.1em] hover:bg-brand-dark hover:text-brand-cream transition-colors rounded-sm">
             Смотреть галерею
-          </Button>
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-0">
           {previewWorks.map((src, idx) => (
-            <div key={idx} className="relative aspect-[3/4] w-full overflow-hidden group rounded-[4px] shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-300">
+            <div key={idx} className="relative aspect-square md:aspect-[3/4] w-full overflow-hidden group">
                <WarmImage src={src} alt="Работа салона Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
             </div>
           ))}
@@ -204,22 +195,24 @@ export default function HomePage() {
       </section>
 
       {/* 8. CTA (GIANT TEXT) */}
-      <section className="bg-brand-brown text-white min-h-[60vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative">
-        <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-brand-cream to-transparent pointer-events-none" />
-        
-        <h2 className="font-serif-display text-5xl md:text-6xl lg:text-[64px] leading-[1.1] tracking-tight mb-12 relative z-10">
-          Запишитесь на удобное время
+      <section className="bg-brand-dark text-brand-cream min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative noise-bg overflow-hidden">
+        <h2 className="font-serif-display text-5xl md:text-7xl lg:text-[90px] leading-[0.9] tracking-[-0.02em] mb-16 relative z-10 uppercase">
+          Запишитесь на<br/>
+          <span className="font-italic-accent text-brand-bordeaux lowercase text-[1.1em]">удобное время</span>
         </h2>
         
-        <div className="flex flex-col gap-8 items-center relative z-10">
-          <Button href="/kontakty#zapis" variant="primary">
+        <div className="flex flex-col gap-12 items-center relative z-10">
+          <Link 
+            href="/kontakty#zapis" 
+            className="bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-12 py-5 text-lg md:text-xl font-medium transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
+          >
             Онлайн-запись
-          </Button>
-          <div className="flex flex-col gap-2 text-brand-cream/80 text-lg font-medium">
-            <a href={SALON_INFO.phoneLink} className="hover:text-brand-caramel transition-colors">
+          </Link>
+          <div className="flex flex-col gap-2 text-brand-cream/80 text-lg md:text-xl font-medium">
+            <a href={SALON_INFO.phoneLink} className="hover:text-brand-bordeaux transition-colors font-sans">
               {SALON_INFO.phone}
             </a>
-            <span className="text-sm opacity-80">{SALON_INFO.address}</span>
+            <span className="text-sm md:text-base opacity-60 font-sans">{SALON_INFO.address}</span>
           </div>
         </div>
       </section>

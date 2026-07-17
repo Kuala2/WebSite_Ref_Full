@@ -57,7 +57,7 @@ export default function AboutPage() {
             </div>
           </div>
           
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm">
             <WarmImage
               src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800"
               alt="Интерьер салона красоты Стенс на Большой Покровской"
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
             {/* Photo */}
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[4px]">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm">
                 <WarmImage
                   src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800"
                   alt="Стерилизация и материалы"
@@ -141,7 +141,7 @@ export default function AboutPage() {
             {INTERIOR_PHOTOS.map((photo, index) => (
               <div
                 key={index}
-                className="relative aspect-[4/5] overflow-hidden rounded-[4px]"
+                className="relative aspect-[4/5] overflow-hidden rounded-sm"
               >
                 <WarmImage
                   src={photo}

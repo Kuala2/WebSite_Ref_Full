@@ -110,7 +110,7 @@ export const MASTERS: Master[] = [
     role: "Ведущий стилист-колорист",
     experience: "11 лет",
     bio: "Эксперт в сложных техниках окрашивания: AirTouch, шатуш и исправлении чужих ошибок. Сделает безупречный блонд, сохранив качество волос.",
-    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
     categories: ["okrashivanie", "strizhki"],
   },
   {
@@ -119,7 +119,7 @@ export const MASTERS: Master[] = [
     role: "Топ-стилист, парикмахер",
     experience: "9 лет",
     bio: "Создает умные женские стрижки, идеально подходящие под ваш тип лица и текстуру волос. Специалист по уходам и восстановлению Lebel.",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
     categories: ["strizhki", "okrashivanie"],
   },
   {
@@ -128,7 +128,7 @@ export const MASTERS: Master[] = [
     role: "Мастер ногтевого сервиса",
     experience: "8 лет",
     bio: "Специализируется на чистом аппаратном маникюре, идеальных бликах и смарт-педикюре. Воплотит любой дизайн от минимализма до френча.",
-    image: "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600",
     categories: ["manikyur-pedikyur"],
   },
   {
@@ -214,7 +214,7 @@ export const REVIEWS: Review[] = [
 export const MAIN_FAQS = [
   {
     question: "Как записаться в салон?",
-    answer: "Вы можете записаться онлайн в любое время суток, нажав кнопку «Записаться онлайн» на сайте. Также мы принимаем записи по телефону 8 (831) 000-00-00 или в сообщениях нашей группы ВКонтакте с 10:00 до 20:00.",
+    answer: "Вы можете записаться онлайн в любое время суток, нажав кнопку «Записаться онлайн» на сайте. Также мы принимаем записи по телефону 8 (831) 283-54-12 или в сообщениях нашей группы ВКонтакте с 10:00 до 20:00.",
   },
   {
     question: "Можно ли отменить или перенести запись?",
@@ -241,7 +241,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     slug: "okrashivanie",
     description: "Сложные техники AirTouch, балаяж, шатуш, тотальный блонд и бережный уход за волосами от ведущих брендов.",
     longDescription: "Специалисты колористики салона «Стенс» работают на премиальных брендах Wella Professionals и Lebel. Мы бережно относимся к здоровью ваших волос, поэтому любое осветление сопровождается защитными комплексами Plex. Специализируемся на исправлении сложных случаев (пятна, полосы, нежелательные оттенки) и выводе из темного бытового красителя в чистый блонд.",
-    image: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=800",
     priceFrom: "3 500 ₽",
     prices: [
       { name: "Окрашивание в один тон (короткие волосы)", price: "от 3 500 ₽" },

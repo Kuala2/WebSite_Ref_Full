@@ -37,7 +37,7 @@ export default function ServicesCatalogPage() {
               className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-24 items-center`}
             >
               {/* Image */}
-              <div className="w-full md:w-1/2 aspect-[3/4] relative overflow-hidden group rounded-[4px]">
+              <div className="w-full md:w-1/2 aspect-[3/4] relative overflow-hidden group rounded-sm">
                 <Link href={`/uslugi/${service.slug}`}>
                   <WarmImage
                     src={service.image}

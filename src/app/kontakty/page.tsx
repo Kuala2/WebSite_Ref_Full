@@ -94,7 +94,7 @@ export default function ContactsPage() {
 
           {/* Map & Directions */}
           <div className="flex flex-col gap-8">
-            <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-[4px] overflow-hidden">
+            <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-sm overflow-hidden">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?text=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%2058&z=16"
                 width="100%"
@@ -107,7 +107,7 @@ export default function ContactsPage() {
               ></iframe>
             </div>
             
-            <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-[4px] shadow-sm">
+            <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-sm shadow-sm">
               <h4 className="font-serif-display text-2xl text-brand-dark mb-4">Как добраться</h4>
               <p className="text-sm md:text-base font-normal text-brand-dark leading-relaxed mb-4">
                 Салон расположен в историческом центре города, на пешеходной улице Большой Покровской.

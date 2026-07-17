@@ -65,7 +65,7 @@ export default function Header() {
             </a>
             <Link
               href="/kontakty#zapis"
-              className="inline-flex items-center justify-center px-8 py-3 bg-brand-accent text-brand-cream hover:bg-[#A37851] text-xs uppercase tracking-[0.12em] font-bold rounded-[4px] shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-3 bg-brand-accent text-brand-cream hover:bg-[#A37851] text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300"
             >
               Запись онлайн
             </Link>
@@ -122,7 +122,7 @@ export default function Header() {
             <Link
               href="/kontakty#zapis"
               onClick={handleLinkClick}
-              className="inline-flex items-center justify-center w-full px-6 py-4 bg-brand-accent text-brand-cream text-xs uppercase tracking-[0.12em] font-bold rounded-[4px] shadow-sm active:shadow-none transition-all duration-300"
+              className="inline-flex items-center justify-center w-full px-6 py-4 bg-brand-accent text-brand-cream text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm active:shadow-none transition-all duration-300"
             >
               Записаться онлайн
             </Link>

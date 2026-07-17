@@ -69,7 +69,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 
       {/* Main Image */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-        <div className="w-full aspect-[21/9] relative overflow-hidden rounded-[4px]">
+        <div className="w-full aspect-[21/9] relative overflow-hidden rounded-sm">
           <WarmImage
             src={service.image}
             alt={`Стенс: ${service.title}`}
@@ -168,7 +168,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {service.gallery.map((imgUrl, idx) => (
-              <div key={idx} className="relative aspect-[3/4] overflow-hidden group rounded-[4px]">
+              <div key={idx} className="relative aspect-[3/4] overflow-hidden group rounded-sm">
                 <WarmImage
                   src={imgUrl}
                   alt={`${service.title} — пример работы`}
