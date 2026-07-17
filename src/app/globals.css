@@ -6,7 +6,7 @@
   --color-brand-cream: #F4EFE7;
   --color-brand-dark: #241C17;
   --color-brand-brown: #241C17;
-  --color-brand-caramel: #B08A5E;
+  --color-brand-caramel: #C89B6D;
   --color-brand-bordeaux: #6E2A2A;
   --color-brand-accent: #6E2A2A;
 }
@@ -58,7 +58,7 @@ body {
 
 /* Warm Image Styling with cinematic feel */
 .warm-img {
-  filter: sepia(0.15) saturate(0.9) brightness(1.03);
+  filter: sepia(0.12) saturate(0.9) brightness(1.03);
 }
 
 .warm-overlay {

@@ -6,52 +6,40 @@ import MasterCard from "@/components/UI/MasterCard";
 import ReviewCard from "@/components/UI/ReviewCard";
 import Accordion from "@/components/UI/Accordion";
 
-export default function HomePage() {
+export default function Home() {
   const previewMasters = MASTERS.slice(0, 3);
   const previewReviews = REVIEWS.slice(0, 3);
-  const previewWorks = [
-    "https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800",
-  ];
+  const previewWorks = ["/images/work-1.jpg", "/images/work-2.jpg", "/images/work-3.jpg"];
 
   return (
     <div className="w-full bg-brand-cream text-brand-dark selection:bg-brand-accent selection:text-white">
       
-      {/* 1. HERO SECTION (EDITORIAL FULL-BLEED) */}
-      <section className="relative w-full min-h-[100svh] flex flex-col justify-end pb-12 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <WarmImage
-            src="https://images.unsplash.com/photo-1521590832167-7bfc1738d0e7?auto=format&fit=crop&q=80&w=2000"
-            alt="Стенс - Премиальный салон красоты"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-brand-dark/20 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent opacity-90" />
-        </div>
+      {/* 1. HERO (FULL BLEED + GIANT TEXT) */}
+      <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center overflow-hidden">
+        <WarmImage 
+          src="/images/hero.jpg"
+          alt="Интерьер салона Стенс" 
+          fill 
+          priority 
+          className="object-cover" 
+        />
+        {/* Сплошной затемняющий слой вместо градиента */}
+        <div className="absolute inset-0 bg-[#1E1611]/55 pointer-events-none" />
 
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col gap-6 md:gap-12 text-brand-cream">
-            <h1 className="font-serif-display text-[clamp(90px,14vw,250px)] leading-[0.8] tracking-[-0.03em] uppercase">
-              Стенс
-            </h1>
-            
-            <div className="flex flex-col md:flex-row gap-8 justify-between items-start md:items-end">
-              <p className="text-xl md:text-3xl font-medium max-w-2xl leading-tight">
-                Премиальный сервис и <span className="font-italic-accent text-brand-bordeaux">эстетика</span> в каждой детали
-              </p>
-              
-              <Link 
-                href="/kontakty#zapis" 
-                className="bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-12 py-5 text-lg md:text-xl font-medium transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
-              >
-                Записаться
-              </Link>
-            </div>
-          </div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full">
+          <h1 className="font-serif-display text-[clamp(90px,18vw,250px)] leading-[0.8] tracking-[-0.04em] text-brand-cream/90 mb-8 uppercase">
+            Стенс
+          </h1>
+          <p className="font-serif-display text-2xl md:text-4xl text-brand-cream/90 max-w-2xl mx-auto leading-snug mb-16 uppercase tracking-[0.02em]">
+            Больше, чем красота.<br/> 
+            Это <span className="font-italic-accent text-brand-caramel lowercase">ощущение</span>.
+          </p>
+          <Link 
+            href="#uslugi" 
+            className="inline-block bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-[48px] py-[18px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
+          >
+            Выбрать услугу
+          </Link>
         </div>
       </section>
 
@@ -198,7 +186,7 @@ export default function HomePage() {
       <section className="bg-brand-dark text-brand-cream min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative noise-bg overflow-hidden">
         <h2 className="font-serif-display text-5xl md:text-7xl lg:text-[90px] leading-[0.9] tracking-[-0.02em] mb-16 relative z-10 uppercase">
           Запишитесь на<br/>
-          <span className="font-italic-accent text-brand-bordeaux lowercase text-[1.1em]">удобное время</span>
+          <span className="font-italic-accent text-brand-caramel lowercase text-[1.1em]">удобное время</span>
         </h2>
         
         <div className="flex flex-col gap-12 items-center relative z-10">

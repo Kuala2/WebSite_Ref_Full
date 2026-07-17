@@ -12,9 +12,8 @@ export const metadata: Metadata = {
 };
 
 const INTERIOR_PHOTOS = [
-  "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800",
+  "/images/interior-1.jpg",
+  "/images/interior-2.jpg",
 ];
 
 export default function AboutPage() {
@@ -59,7 +58,7 @@ export default function AboutPage() {
           
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm">
             <WarmImage
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800"
+              src="/images/interior-1.jpg"
               alt="Интерьер салона красоты Стенс на Большой Покровской"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -77,7 +76,7 @@ export default function AboutPage() {
             {/* Photo */}
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm">
                 <WarmImage
-                  src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=800"
+                  src="/images/interior-2.jpg"
                   alt="Стерилизация и материалы"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -137,7 +136,7 @@ export default function AboutPage() {
               Наш интерьер
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {INTERIOR_PHOTOS.map((photo, index) => (
               <div
                 key={index}
