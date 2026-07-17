@@ -55,7 +55,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full sm:w-auto">
             <Link 
-              href="#uslugi" 
+              href="/kontakty#zapis" 
               className="inline-block w-full sm:w-auto text-center bg-[#6E2A2A] hover:bg-[#5a2121] text-white px-[56px] py-[22px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
             >
               Записаться

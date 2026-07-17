@@ -48,9 +48,9 @@ export const SALON_INFO = {
   established: 2018,
   rating: 4.9,
   reviewsCount: "180+",
-  bookingUrl: "https://dikidi.net", // placeholder for booking integration
-  vkUrl: "https://vk.com",
-  tgUrl: "https://t.me",
+  bookingUrl: "https://dikidi.net/ru/profile/stens",
+  vkUrl: "https://vk.com/salon_stens",
+  tgUrl: "https://t.me/salon_stens",
 };
 
 export const ADVANTAGES = [
