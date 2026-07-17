@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#F4EFE7] text-[#2A211B] transition-all duration-300 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-50">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
@@ -87,12 +87,14 @@ export default function Header() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 text-[#2A211B] min-h-[44px] min-w-[44px]"
+              className={`inline-flex items-center justify-center p-1 text-[#2A211B] min-h-[44px] min-w-[44px] transition-all duration-300 ${
+                isOpen ? "border border-[#2A211B] rounded-sm" : ""
+              }`}
               aria-expanded={isOpen}
             >
               <span className="sr-only">Меню</span>
               {isOpen ? (
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
