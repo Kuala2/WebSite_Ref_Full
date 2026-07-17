@@ -10,7 +10,7 @@ export default function Footer() {
         
         {/* Giant Text */}
         <div className="mb-24 md:mb-32">
-          <h2 className="font-serif-display text-[15vw] md:text-[12rem] leading-[0.8] tracking-tighter">
+          <h2 className="font-serif-display text-[15vw] md:text-[12rem] leading-[0.8] tracking-tighter opacity-5">
             Стенс
           </h2>
         </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SALON_INFO } from "@/constants/data";
 import Button from "@/components/UI/Button";
 import Accordion from "@/components/UI/Accordion";
-
+import LazyMap from "@/components/UI/LazyMap";
 export const metadata: Metadata = {
   title: "Контакты и онлайн-запись — Салон красоты Стенс",
   description: "Контакты салона красоты «Стенс» в Нижнем Новгороде: адрес на Большой Покровской, телефон 8 (831) 000-00-00, режим работы и онлайн-запись со скидкой 10%.",
@@ -94,18 +94,7 @@ export default function ContactsPage() {
 
           {/* Map & Directions */}
           <div className="flex flex-col gap-8">
-            <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-sm overflow-hidden">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=43.994326%2C56.313904&mode=whatshere&whatshere%5Bpoint%5D=43.994326%2C56.313904&whatshere%5Bzoom%5D=17&z=17"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                title="Салон Стенс на карте Яндекс"
-                className="absolute inset-0 w-full h-full opacity-90"
-              ></iframe>
-            </div>
+            <LazyMap />
             
             <div className="bg-brand-cream border border-brand-dark/10 p-8 rounded-sm shadow-sm">
               <h4 className="font-serif-display text-2xl text-brand-dark mb-4">Как добраться</h4>

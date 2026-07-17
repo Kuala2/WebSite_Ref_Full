@@ -6,7 +6,7 @@ export default function WarmImage({ className, fill, width, height, alt, sizes, 
   const defaultSizes = fill && !sizes ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : sizes;
 
   return (
-    <div className={`relative overflow-hidden ${className || ''} ${fill ? 'w-full h-full' : ''}`}>
+    <div className={`relative overflow-hidden bg-gradient-to-tr from-[#EBE3D5] to-[#F4EFE7] ${className || ''} ${fill ? 'w-full h-full' : ''}`}>
       <Image 
         {...props} 
         alt={alt}

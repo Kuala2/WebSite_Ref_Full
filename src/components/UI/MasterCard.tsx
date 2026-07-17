@@ -26,12 +26,12 @@ export default function MasterCard({ master }: MasterCardProps) {
           <h3 className="font-serif-display text-4xl text-brand-dark leading-none">
             {master.name}
           </h3>
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-dark/60 shrink-0">
+          <span className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-dark/60 shrink-0">
             {master.experience}
           </span>
         </div>
         
-        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-bordeaux mt-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-bordeaux mt-2">
           {master.role}
         </p>
         

@@ -74,6 +74,10 @@ img {
   z-index: 10;
 }
 
+.gallery-image-filter img {
+  filter: sepia(0.25) saturate(0.85) brightness(0.95) contrast(1.05);
+}
+
 /* Noise overlay for dark sections */
 .noise-bg {
   position: relative;

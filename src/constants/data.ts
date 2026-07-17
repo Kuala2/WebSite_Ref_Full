@@ -450,4 +450,10 @@ export const GALLERY_WORKS = [
     description: "Выразительный изгиб и уплотнение каждой реснички",
     image: "/images/work_lashes.webp",
   },
+  {
+    category: "strizhki",
+    title: "Идеальные волны",
+    description: "Здоровый блонд и премиальный уход",
+    image: "/images/work_waves.webp",
+  },
 ];

@@ -176,7 +176,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-0">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-0 gallery-image-filter">
           {previewWorks.map((src, idx) => (
             <div key={idx} className="relative aspect-square md:aspect-[3/4] w-full overflow-hidden group">
                <WarmImage src={src} alt="Работа салона Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
