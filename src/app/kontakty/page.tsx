@@ -77,13 +77,13 @@ export default function ContactsPage() {
             </div>
 
             {/* Booking Box */}
-            <div id="zapis" className="border-t border-brand-dark/20 pt-16 scroll-mt-32">
+            <div id="zapis" className="border-t border-brand-dark/20 pt-8 scroll-mt-32">
               <span className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4 block">Скидка 10% на первый визит</span>
               <h3 className="font-serif-display text-4xl text-brand-dark mb-8">Онлайн-запись 24/7</h3>
               
               <div className="flex flex-col gap-6 w-full max-w-sm">
                 <Button href={SALON_INFO.bookingUrl} variant="primary">
-                  Записаться в DIKIDI
+                  Записаться онлайн
                 </Button>
                 <Button href={SALON_INFO.vkUrl} variant="outline">
                   Написать ВКонтакте
@@ -96,7 +96,7 @@ export default function ContactsPage() {
           <div className="flex flex-col gap-8">
             <div className="relative h-[400px] md:h-[500px] w-full bg-brand-dark/5 rounded-sm overflow-hidden">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?text=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%2058&z=16"
+                src="https://yandex.ru/map-widget/v1/?ll=43.994326%2C56.313904&mode=whatshere&whatshere%5Bpoint%5D=43.994326%2C56.313904&whatshere%5Bzoom%5D=17&z=17"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

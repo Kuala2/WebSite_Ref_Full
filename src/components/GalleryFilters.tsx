@@ -21,25 +21,27 @@ export default function GalleryFilters() {
 
  return (
  <div className="space-y-16">
- {/* Filter Buttons */}
- <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto px-4">
- {FILTERS.map((filter) => {
- const isActive = activeFilter === filter.key;
- return (
- <button
- key={filter.key}
- onClick={() => setActiveFilter(filter.key)}
- className={`px-8 py-3 text-[10px] uppercase tracking-[0.12em] transition-all duration-300 cursor-pointer ${
- isActive
- ? "border-b border-brand-dark text-brand-dark"
- : "border-b border-transparent text-brand-dark/50 hover:text-brand-dark"
- }`}
- >
- {filter.name}
- </button>
- );
- })}
- </div>
+  {/* Filter Chips */}
+  <div className="w-full max-w-4xl mx-auto px-4">
+    <div className="flex overflow-x-auto no-scrollbar gap-3 pb-2 items-center lg:justify-center">
+      {FILTERS.map((filter) => {
+        const isActive = activeFilter === filter.key;
+        return (
+          <button
+            key={filter.key}
+            onClick={() => setActiveFilter(filter.key)}
+            className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium tracking-[0.05em] transition-all duration-300 cursor-pointer ${
+              isActive
+                ? "bg-brand-bordeaux text-brand-cream shadow-md"
+                : "bg-brand-dark/5 text-brand-dark hover:bg-brand-dark/10"
+            }`}
+          >
+            {filter.name}
+          </button>
+        );
+      })}
+    </div>
+  </div>
 
  {/* Grid of works */}
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

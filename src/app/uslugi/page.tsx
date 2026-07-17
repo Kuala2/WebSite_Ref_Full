@@ -2,6 +2,8 @@ import Link from "next/link";
 import WarmImage from "@/components/UI/WarmImage";
 import { Metadata } from "next";
 import { SERVICES_DATA } from "@/constants/data";
+import PriceAccordion from "@/components/UI/PriceAccordion";
+import Button from "@/components/UI/Button";
 
 export const metadata: Metadata = {
   title: "Услуги и цены — Салон красоты Стенс в Нижнем Новгороде",
@@ -62,13 +64,8 @@ export default function ServicesCatalogPage() {
                 <p className="text-lg text-brand-dark font-normal leading-relaxed mb-12 max-w-md">
                   {service.description}
                 </p>
-                <div className="flex items-center gap-8">
-                  <Link
-                    href={`/uslugi/${service.slug}`}
-                    className="text-xs font-semibold uppercase tracking-[0.12em] border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all"
-                  >
-                    Прайс-лист
-                  </Link>
+                <div className="w-full max-w-sm">
+                  <PriceAccordion prices={service.prices} />
                 </div>
               </div>
             </div>
@@ -77,26 +74,44 @@ export default function ServicesCatalogPage() {
       </section>
 
       {/* Info banner about safety */}
-      <section className="border-y border-brand-dark/10 py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
-          <div className="space-y-6">
-            <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Стерилизация</h4>
-            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
-              Медицинские стандарты стерилизации. Крафт-пакеты вскрываются исключительно при вас.
-            </p>
+      <section className="py-32 md:py-48 bg-[#F4EFE7]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">01</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Стерилизация</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                Медицинские стандарты стерилизации. <span className="font-bold">Крафт-пакеты вскрываются исключительно при вас.</span>
+              </p>
+            </div>
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">02</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Материалы</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                Мы используем только премиальные красители <span className="font-bold">Lebel и Keune.</span>
+              </p>
+            </div>
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">03</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Экспертность</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                <span className="font-bold">Бесплатная очная консультация</span> перед сложным окрашиванием для гарантии результата.
+              </p>
+            </div>
           </div>
-          <div className="space-y-6">
-            <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Материалы</h4>
-            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
-              Мы используем только премиальные красители Wella Professionals и японские уходы Lebel.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <h4 className="font-serif-display text-2xl md:text-3xl text-brand-dark">Экспертность</h4>
-            <p className="text-sm md:text-base text-brand-dark leading-relaxed font-normal">
-              Бесплатная очная консультация перед сложным окрашиванием для гарантии результата.
-            </p>
-          </div>
+        </div>
+      </section>
+
+      {/* CTA section */}
+      <section className="py-32 border-t border-brand-dark/10">
+        <div className="px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
+          <h3 className="font-serif-display text-3xl md:text-4xl text-brand-dark mb-8">Не нашли свою услугу?</h3>
+          <p className="text-lg text-brand-dark font-normal mb-12">
+            Позвоните — подберём мастера и удобное время
+          </p>
+          <Button href="/kontakty#zapis" variant="primary">
+            Записаться онлайн
+          </Button>
         </div>
       </section>
     </div>
