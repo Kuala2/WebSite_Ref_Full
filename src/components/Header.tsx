@@ -21,14 +21,14 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-brand-cream/95 backdrop-blur-sm transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-[#F4EFE7] text-[#2A211B] transition-all duration-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link 
               href="/" 
-              className="font-serif-display text-4xl font-bold text-brand-dark tracking-tight hover:text-brand-accent transition-colors"
+              className="font-serif-display text-4xl font-bold text-[#2A211B] tracking-tight hover:text-[#6E2A2A] transition-colors"
               onClick={handleLinkClick}
             >
               Стенс
@@ -45,8 +45,8 @@ export default function Header() {
                   href={link.href}
                   className={`text-xs tracking-[0.12em] uppercase transition-colors duration-300 py-2 ${
                     isActive
-                      ? "text-brand-accent"
-                      : "text-brand-dark/70 hover:text-brand-accent"
+                      ? "text-[#6E2A2A]"
+                      : "text-[#2A211B]/80 hover:text-[#6E2A2A]"
                   }`}
                 >
                   {link.name}
@@ -59,13 +59,13 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-6">
             <a
               href={SALON_INFO.phoneLink}
-              className="text-xs tracking-[0.12em] uppercase text-brand-dark hover:text-brand-accent transition-colors py-2"
+              className="text-xs tracking-[0.12em] uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors py-2"
             >
               {SALON_INFO.phone}
             </a>
             <Link
               href="/kontakty#zapis"
-              className="inline-flex items-center justify-center px-8 py-3 bg-brand-accent text-brand-cream hover:bg-[#A37851] text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#6E2A2A] text-white hover:bg-[#5a2121] text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm hover:shadow-md transform hover:-translate-y-1 active:translate-y-0 transition-all duration-300"
             >
               Запись онлайн
             </Link>
@@ -76,7 +76,7 @@ export default function Header() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 text-brand-dark min-h-[44px] min-w-[44px]"
+              className="inline-flex items-center justify-center p-2 text-[#2A211B] min-h-[44px] min-w-[44px]"
               aria-expanded={isOpen}
             >
               <span className="sr-only">Меню</span>
@@ -96,7 +96,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="md:hidden absolute top-24 left-0 w-full h-[100svh] bg-brand-cream flex flex-col pt-12 px-6">
+        <div className="md:hidden absolute top-24 left-0 w-full h-[100svh] bg-[#F4EFE7] flex flex-col pt-12 px-6">
           <nav className="flex flex-col space-y-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
@@ -106,7 +106,7 @@ export default function Header() {
                   href={link.href}
                   onClick={handleLinkClick}
                   className={`font-serif-display text-4xl transition-colors ${
-                    isActive ? "text-brand-accent" : "text-brand-dark"
+                    isActive ? "text-[#6E2A2A]" : "text-[#2A211B]"
                   }`}
                 >
                   {link.name}
@@ -116,13 +116,13 @@ export default function Header() {
           </nav>
           
           <div className="mt-24 flex flex-col gap-8">
-            <a href={SALON_INFO.phoneLink} className="text-sm tracking-[0.12em] uppercase text-brand-dark">
+            <a href={SALON_INFO.phoneLink} className="text-sm tracking-[0.12em] uppercase text-[#2A211B]">
               {SALON_INFO.phone}
             </a>
             <Link
               href="/kontakty#zapis"
               onClick={handleLinkClick}
-              className="inline-flex items-center justify-center w-full px-6 py-4 bg-brand-accent text-brand-cream text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm active:shadow-none transition-all duration-300"
+              className="inline-flex items-center justify-center w-full px-6 py-4 bg-[#6E2A2A] text-white text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm active:shadow-none transition-all duration-300"
             >
               Записаться онлайн
             </Link>

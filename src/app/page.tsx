@@ -14,32 +14,46 @@ export default function Home() {
   return (
     <div className="w-full bg-brand-cream text-brand-dark selection:bg-brand-accent selection:text-white">
       
-      {/* 1. HERO (FULL BLEED + GIANT TEXT) */}
-      <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center overflow-hidden">
-        <WarmImage 
-          src="/images/hero.jpg"
-          alt="Интерьер салона Стенс" 
-          fill 
-          priority 
-          className="object-cover" 
-        />
-        {/* Сплошной затемняющий слой вместо градиента */}
-        <div className="absolute inset-0 bg-[#1E1611]/55 pointer-events-none" />
+      {/* 1. HERO (TWO COLUMNS) */}
+      <section className="w-full grid grid-cols-1 lg:grid-cols-[52%_48%] min-h-[86vh]">
+        {/* Левая колонка */}
+        <div className="relative w-full h-[50vh] lg:h-auto min-h-full">
+          <WarmImage 
+            src="/images/hero.jpg"
+            alt="Интерьер салона Стенс" 
+            fill 
+            priority 
+            className="object-cover" 
+          />
+        </div>
 
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="font-serif-display text-[clamp(90px,18vw,250px)] leading-[0.8] tracking-[-0.04em] text-brand-cream/90 mb-8 uppercase">
+        {/* Правая колонка */}
+        <div className="flex flex-col justify-center px-8 sm:px-12 lg:px-24 py-16 lg:py-0 bg-[#EFE8DC]">
+          <span className="text-[13px] tracking-[0.22em] text-[#6E2A2A] uppercase mb-8 font-medium">
+            Салон красоты · Нижний Новгород
+          </span>
+          <h1 className="font-serif-display font-bold text-[#2A211B] text-7xl sm:text-8xl lg:text-[110px] leading-[0.9] mb-8 tracking-tight uppercase">
             Стенс
           </h1>
-          <p className="font-serif-display text-2xl md:text-4xl text-brand-cream/90 max-w-2xl mx-auto leading-snug mb-16 uppercase tracking-[0.02em]">
-            Больше, чем красота.<br/> 
-            Это <span className="font-italic-accent text-brand-caramel lowercase">ощущение</span>.
+          <p className="text-[21px] text-[#2A211B] max-w-md leading-relaxed mb-12 font-medium">
+            Премиальный сервис и <span className="font-serif italic text-[#6E2A2A] lowercase">эстетика</span> в каждой детали
           </p>
-          <Link 
-            href="#uslugi" 
-            className="inline-block bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-[48px] py-[18px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
-          >
-            Выбрать услугу
-          </Link>
+          <div className="mb-14">
+            <p className="font-serif text-[27px] text-[#2A211B]">
+              с 2018 — года работы / 6 — мастеров / 4.9 — рейтинг
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+            <Link 
+              href="#uslugi" 
+              className="inline-block bg-[#6E2A2A] hover:bg-[#5a2121] text-white px-[56px] py-[22px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
+            >
+              Записаться
+            </Link>
+            <a href={SALON_INFO.phoneLink} className="text-[#2A211B] font-medium text-lg hover:text-[#6E2A2A] transition-colors">
+              {SALON_INFO.phone}
+            </a>
+          </div>
         </div>
       </section>
 
