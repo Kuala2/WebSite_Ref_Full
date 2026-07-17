@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SALON_INFO } from "@/constants/data";
@@ -8,6 +8,17 @@ import { SALON_INFO } from "@/constants/data";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const navLinks = [
     { name: "Услуги", href: "/uslugi" },
@@ -95,19 +106,24 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div className="md:hidden absolute top-24 left-0 w-full h-[100svh] bg-[#F4EFE7] flex flex-col pt-12 px-6">
-          <nav className="flex flex-col space-y-8">
-            {navLinks.map((link) => {
+      <div 
+        className={`md:hidden fixed inset-0 z-40 bg-[#F4EFE7] transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] flex flex-col ${
+          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col h-full pt-32 px-6 pb-12 overflow-y-auto">
+          <nav className="flex flex-col items-center space-y-10 mt-4">
+            {navLinks.map((link, idx) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={handleLinkClick}
-                  className={`font-serif-display text-4xl transition-colors ${
-                    isActive ? "text-[#6E2A2A]" : "text-[#2A211B]"
-                  }`}
+                  className={`font-serif-display text-5xl sm:text-6xl tracking-tight transition-all duration-500 transform ${
+                    isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                  } ${isActive ? "text-[#6E2A2A]" : "text-[#2A211B] hover:text-[#6E2A2A]"}`}
+                  style={{ transitionDelay: `${isOpen ? 100 + idx * 100 : 0}ms` }}
                 >
                   {link.name}
                 </Link>
@@ -115,20 +131,29 @@ export default function Header() {
             })}
           </nav>
           
-          <div className="mt-24 flex flex-col gap-8">
-            <a href={SALON_INFO.phoneLink} className="text-sm tracking-[0.12em] uppercase text-[#2A211B]">
+          <div 
+            className={`mt-auto flex flex-col items-center gap-8 pt-12 border-t border-[#2A211B]/10 transition-all duration-700 transform ${
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: `${isOpen ? 500 : 0}ms` }}
+          >
+            <div className="flex gap-8">
+              <a href={SALON_INFO.vkUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">ВКонтакте</a>
+              <a href={SALON_INFO.tgUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">Telegram</a>
+            </div>
+            <a href={SALON_INFO.phoneLink} className="font-serif-display text-3xl text-[#2A211B] hover:text-[#6E2A2A] transition-colors">
               {SALON_INFO.phone}
             </a>
             <Link
               href="/kontakty#zapis"
               onClick={handleLinkClick}
-              className="inline-flex items-center justify-center w-full px-6 py-4 bg-[#6E2A2A] text-white text-xs uppercase tracking-[0.12em] font-bold rounded-sm shadow-sm active:shadow-none transition-all duration-300"
+              className="inline-flex items-center justify-center w-full max-w-[320px] px-8 py-5 bg-[#6E2A2A] text-white text-xs uppercase tracking-[0.15em] font-bold rounded-sm shadow-xl active:shadow-none transition-all duration-300 hover:-translate-y-1 hover:bg-[#5a2121]"
             >
               Записаться онлайн
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
