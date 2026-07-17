@@ -52,7 +52,7 @@ export default function Footer() {
               {['Услуги', 'Работы', 'О салоне', 'Контакты'].map((item) => (
                 <li key={item}>
                   <Link 
-                    href={`/${item === 'Работы' ? 'raboty' : item === 'Услуги' ? 'uslugi' : item === 'О салоне' ? 'o-salone' : 'kontakty'}`} 
+                    href={`#${item === 'Работы' ? 'raboty' : item === 'Услуги' ? 'uslugi' : item === 'О салоне' ? 'komanda' : 'zapis'}`} 
                     className="text-sm tracking-[0.12em] uppercase hover:text-brand-accent transition-colors text-white/90 font-medium"
                   >
                     {item}

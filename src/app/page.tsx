@@ -119,13 +119,13 @@ export default function Home() {
       </section>
 
       {/* 3. TOP SERVICES (EDITORIAL CAROUSEL / MASONRY) */}
-      <section className="py-32 md:py-48 bg-brand-dark text-brand-cream noise-bg">
+      <section id="uslugi" className="py-32 md:py-48 bg-brand-dark text-brand-cream noise-bg">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24 md:mb-32">
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Услуги и цены
             </h2>
-            <Link href="/uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
+            <Link href="#uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
               Посмотреть меню &rarr;
             </Link>
           </div>
@@ -156,7 +156,7 @@ export default function Home() {
                   {service.description}
                 </p>
                 
-                <Link href={`/uslugi/${service.slug}`} className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors flex items-center">
+                <Link href="#uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors flex items-center">
                   Подробнее
                 </Link>
               </div>
@@ -166,12 +166,12 @@ export default function Home() {
       </section>
 
       {/* 4. GALLERY (FULL BLEED) */}
-      <section className="pt-32 pb-0">
+      <section id="raboty" className="pt-32 pb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 text-center">
           <h2 className="font-serif-display text-4xl md:text-5xl mb-12">
             Наши работы
           </h2>
-          <Link href="/raboty" className="inline-block border border-brand-dark/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.1em] hover:bg-brand-dark hover:text-brand-cream transition-colors rounded-sm">
+          <Link href="#raboty" className="inline-block border border-brand-dark/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.1em] hover:bg-brand-dark hover:text-brand-cream transition-colors rounded-sm">
             Смотреть галерею
           </Link>
         </div>
@@ -186,13 +186,13 @@ export default function Home() {
       </section>
 
       {/* 5. TEAM (MINIMAL) */}
-      <section className="py-32 md:py-48 border-t border-brand-dark/10">
+      <section id="komanda" className="py-32 md:py-48 border-t border-brand-dark/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24">
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Команда мастеров
             </h2>
-            <Link href="/o-salone" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
+            <Link href="#komanda" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
               Вся команда &rarr;
             </Link>
           </div>
@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* 8. CTA (GIANT TEXT) */}
-      <section className="bg-brand-dark text-brand-cream min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative noise-bg overflow-hidden">
+      <section id="zapis" className="bg-brand-dark text-brand-cream min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-24 relative noise-bg overflow-hidden">
         <h2 className="font-serif-display text-5xl md:text-7xl lg:text-[90px] leading-[0.9] tracking-[-0.02em] mb-16 relative z-10 uppercase">
           Запишитесь на<br/>
           <span className="font-italic-accent text-brand-caramel lowercase text-[1.1em]">удобное время</span>
@@ -234,7 +234,7 @@ export default function Home() {
         
         <div className="flex flex-col gap-12 items-center relative z-10">
           <Link 
-            href="/kontakty#zapis" 
+            href="#zapis" 
             className="bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-12 py-5 text-lg md:text-xl font-medium transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
           >
             Онлайн-запись
