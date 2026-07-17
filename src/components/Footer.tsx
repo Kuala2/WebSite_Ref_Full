@@ -23,12 +23,12 @@ export default function Footer() {
               Искусство преображения и заботы в Нижнем Новгороде с {SALON_INFO.established} года.
             </p>
             {/* Social Icons */}
-            <div className="flex space-x-6 pt-4">
+            <div className="flex space-x-6">
               <a
                 href={SALON_INFO.vkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.12em] hover:text-brand-accent transition-colors"
+                className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
                 aria-label="ВКонтакте"
               >
                 ВКонтакте
@@ -37,7 +37,7 @@ export default function Footer() {
                 href={SALON_INFO.tgUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.12em] hover:text-brand-accent transition-colors"
+                className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
                 aria-label="Telegram"
               >
                 Телеграм
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-8">Навигация</h3>
+            <h3 className="text-[10px] tracking-[0.12em] uppercase text-[#B8AFA5] mb-4 md:mb-8">Навигация</h3>
             <ul className="space-y-4">
               {['Услуги', 'Работы', 'О салоне', 'Контакты'].map((item) => (
                 <li key={item}>
@@ -65,16 +65,16 @@ export default function Footer() {
           {/* Contacts */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-4">Визит</h3>
+              <h3 className="text-[10px] tracking-[0.12em] uppercase text-[#B8AFA5] mb-4">Визит</h3>
               <p className="text-sm font-light leading-relaxed">
                 {SALON_INFO.address}<br/>
-                <span className="text-brand-cream/50 mt-1 block">м. Горьковская (5 мин)</span>
+                <span className="text-[#B8AFA5] mt-1 block">м. Горьковская (5 мин)</span>
               </p>
             </div>
             
             <div>
-              <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-4">Связь</h3>
-              <a href={SALON_INFO.phoneLink} className="text-sm font-medium text-white/90 hover:text-brand-accent transition-colors block">
+              <h3 className="text-[10px] tracking-[0.12em] uppercase text-[#B8AFA5] mb-4">Связь</h3>
+              <a href={SALON_INFO.phoneLink} className="text-sm font-medium text-white/90 hover:text-white transition-colors block">
                 {SALON_INFO.phone}
               </a>
             </div>
@@ -83,9 +83,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.12em] uppercase text-brand-cream/30 space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.12em] uppercase text-[#B8AFA5] space-y-4 md:space-y-0 mt-8 md:mt-0">
           <p>&copy; {currentYear} Салон красоты Стенс. Все права защищены.</p>
-          <Link href="/privacy" className="hover:text-brand-accent transition-colors">
+          <Link href="/privacy" className="hover:text-white transition-colors">
             Политика конфиденциальности
           </Link>
         </div>

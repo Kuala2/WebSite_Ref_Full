@@ -1,5 +1,6 @@
 import WarmImage from "@/components/UI/WarmImage";
 import Link from "next/link";
+import MobileStickyCTA from "@/components/UI/MobileStickyCTA";
 import { SALON_INFO, ADVANTAGES, TOP_SERVICES, MASTERS, REVIEWS, MAIN_FAQS } from "@/constants/data";
 import Button from "@/components/UI/Button";
 import MasterCard from "@/components/UI/MasterCard";
@@ -66,37 +67,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WRAPPER FOR STICKY BUTTON AND THE REST OF THE PAGE */}
+      {/* WRAPPER FOR THE REST OF THE PAGE */}
       <div className="relative">
-        <div className="sticky top-auto bottom-6 z-50 md:hidden px-4 pointer-events-none w-full flex justify-center -mt-6">
-          <Link 
-            href="/kontakty#zapis" 
-            className="pointer-events-auto block w-full max-w-sm bg-[#6E2A2A] text-white text-center py-4 rounded-sm shadow-2xl font-bold uppercase tracking-[0.15em] text-sm"
-          >
-            Записаться
-          </Link>
-        </div>
+        <MobileStickyCTA />
 
-      {/* 2. ADVANTAGES (MINIMALIST LIST) */}
-      <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-brand-dark/10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
-          <div className="md:col-span-4 flex flex-col gap-8">
-            <h2 className="font-serif-display text-4xl md:text-5xl sticky top-32">
-              Почему выбирают Стенс
-            </h2>
-          </div>
+      {/* 2. ADVANTAGES (CARDS) */}
+      <section className="py-32 md:py-48 bg-[#F4EFE7]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif-display text-4xl md:text-5xl mb-16 text-center text-[#2A211B]">
+            Почему выбирают Стенс
+          </h2>
           
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-24">
-            {ADVANTAGES.map((adv, idx) => (
-              <div key={idx} className="flex flex-col gap-6">
-                <h3 className="font-serif-display text-4xl md:text-5xl leading-tight">
-                  {adv.title}
-                </h3>
-                <p className="text-xl text-brand-dark font-medium leading-relaxed opacity-80">
-                  {adv.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">01</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Опыт</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                Мастера регулярно обучаются у ведущих технологов России и Европы. <span className="font-bold">Только трендовые и безопасные техники.</span>
+              </p>
+            </div>
+            
+            {/* Card 2 */}
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">02</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Бренды</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                Работаем на премиальной косметике <span className="font-bold">Lebel и Keune</span> — роскошный цвет плюс глубокое восстановление волос.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">03</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Безопасность</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                Медицинский подход: <span className="font-bold">четыре этапа очистки инструмента</span> и индивидуальные крафт-пакеты, которые вскрываются при вас.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-[#EFE8DC] p-8 md:p-12 rounded-sm border border-[#2A211B]/10 flex flex-col gap-4 shadow-sm">
+              <div className="text-3xl font-serif text-[#6E2A2A] mb-2 opacity-80">04</div>
+              <h3 className="font-serif-display text-2xl md:text-3xl text-[#2A211B]">Премиум сервис</h3>
+              <p className="text-[#2A211B]/80 leading-relaxed font-medium">
+                <span className="font-bold">Specialty-кофе, авторские чаи</span>, удобные кресла и атмосфера уединения.
+              </p>
+            </div>
           </div>
         </div>
       </section>
