@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const INTERIOR_PHOTOS = [
   "/images/interior-1.jpg",
   "/images/interior-2.jpg",
+  "/images/interior_3.jpg",
 ];
 
 export default function AboutPage() {
