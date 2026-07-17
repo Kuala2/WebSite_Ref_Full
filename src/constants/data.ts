@@ -41,16 +41,16 @@ export const SALON_INFO = {
   name: "Стенс",
   address: "Нижний Новгород, ул. Большая Покровская, 58",
   locationNote: "5 минут от станции метро «Горьковская», вход со двора через арку",
-  phone: "8 (831) 283-54-12",
-  phoneLink: "tel:+78312835412",
+  phone: "8 (831) 000-00-00",
+  phoneLink: "tel:+78310000000",
   scheduleWeekdays: "пн–пт 10:00–20:00",
   scheduleWeekends: "сб–вс 10:00–18:00",
   established: 2018,
   rating: 4.9,
   reviewsCount: "180+",
-  bookingUrl: "https://dikidi.net/ru/profile/stens",
-  vkUrl: "https://vk.com/salon_stens",
-  tgUrl: "https://t.me/salon_stens",
+  bookingUrl: "https://dikidi.net/", // placeholder for booking integration
+  vkUrl: "https://vk.com/",
+  tgUrl: "https://t.me/",
 };
 
 export const ADVANTAGES = [
