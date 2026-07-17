@@ -27,7 +27,7 @@ export default function LazyMap() {
         </div>
       ) : (
         <iframe
-          src="https://yandex.ru/map-widget/v1/?ll=43.994326%2C56.313904&mode=whatshere&whatshere%5Bpoint%5D=43.994326%2C56.313904&whatshere%5Bzoom%5D=17&z=17"
+          src="https://yandex.ru/map-widget/v1/?ll=43.990392%2C56.312575&mode=whatshere&whatshere%5Bpoint%5D=43.990392%2C56.312575&whatshere%5Bzoom%5D=17&z=17"
           width="100%"
           height="100%"
           style={{ border: 0 }}
