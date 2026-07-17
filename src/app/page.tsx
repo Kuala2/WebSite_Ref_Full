@@ -9,7 +9,7 @@ import Accordion from "@/components/UI/Accordion";
 export default function Home() {
   const previewMasters = MASTERS.slice(0, 3);
   const previewReviews = REVIEWS.slice(0, 3);
-  const previewWorks = ["/images/work-1.jpg", "/images/work-2.jpg", "/images/work-3.jpg"];
+  const previewWorks = ["/images/work-1.webp", "/images/work-2.webp", "/images/work-3.webp", "/images/work-4.webp"];
 
   return (
     <div className="w-full bg-brand-cream text-brand-dark selection:bg-brand-accent selection:text-white">
@@ -19,7 +19,7 @@ export default function Home() {
         {/* Левая колонка */}
         <div className="relative w-full h-[50vh] lg:h-auto min-h-full">
           <WarmImage 
-            src="/images/hero.jpg"
+            src="/images/hero.webp"
             alt="Интерьер салона Стенс" 
             fill 
             priority 
@@ -38,15 +38,24 @@ export default function Home() {
           <p className="text-[21px] text-[#2A211B] max-w-md leading-relaxed mb-12 font-medium">
             Премиальный сервис и <span className="font-serif italic text-[#6E2A2A] lowercase">эстетика</span> в каждой детали
           </p>
-          <div className="mb-14">
-            <p className="font-serif text-[27px] text-[#2A211B]">
-              с 2018 — года работы / 6 — мастеров / 4.9 — рейтинг
-            </p>
+          <div className="mb-14 flex gap-x-8">
+            <div className="flex flex-col">
+              <span className="font-serif-display text-4xl text-[#2A211B] mb-1">2018</span>
+              <span className="text-[10px] uppercase tracking-widest text-[#2A211B]/60">работаем с</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif-display text-4xl text-[#2A211B] mb-1">6</span>
+              <span className="text-[10px] uppercase tracking-widest text-[#2A211B]/60">мастеров</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif-display text-4xl text-[#2A211B] mb-1">4.9</span>
+              <span className="text-[10px] uppercase tracking-widest text-[#2A211B]/60">рейтинг</span>
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 w-full sm:w-auto">
             <Link 
               href="#uslugi" 
-              className="inline-block bg-[#6E2A2A] hover:bg-[#5a2121] text-white px-[56px] py-[22px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
+              className="inline-block w-full sm:w-auto text-center bg-[#6E2A2A] hover:bg-[#5a2121] text-white px-[56px] py-[22px] text-lg font-medium uppercase tracking-[0.1em] transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
             >
               Записаться
             </Link>
@@ -57,6 +66,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WRAPPER FOR STICKY BUTTON AND THE REST OF THE PAGE */}
+      <div className="relative">
+        <div className="sticky top-auto bottom-6 z-50 md:hidden px-4 pointer-events-none w-full flex justify-center -mt-6">
+          <Link 
+            href="/kontakty#zapis" 
+            className="pointer-events-auto block w-full max-w-sm bg-[#6E2A2A] text-white text-center py-4 rounded-sm shadow-2xl font-bold uppercase tracking-[0.15em] text-sm"
+          >
+            Записаться
+          </Link>
+        </div>
+
       {/* 2. ADVANTAGES (MINIMALIST LIST) */}
       <section className="py-32 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-brand-dark/10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
@@ -64,14 +84,6 @@ export default function Home() {
             <h2 className="font-serif-display text-4xl md:text-5xl sticky top-32">
               Почему выбирают Стенс
             </h2>
-            <div className="relative w-full aspect-[3/4] hidden md:block rounded-sm overflow-hidden mt-8">
-              <WarmImage 
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" 
-                alt="Интерьер салона красоты Стенс" 
-                fill 
-                className="object-cover"
-              />
-            </div>
           </div>
           
           <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-24">
@@ -147,7 +159,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-0">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-0">
           {previewWorks.map((src, idx) => (
             <div key={idx} className="relative aspect-square md:aspect-[3/4] w-full overflow-hidden group">
                <WarmImage src={src} alt="Работа салона Стенс" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
@@ -218,6 +230,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
     </div>
   );

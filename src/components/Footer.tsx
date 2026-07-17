@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link 
                     href={`/${item === 'Работы' ? 'raboty' : item === 'Услуги' ? 'uslugi' : item === 'О салоне' ? 'o-salone' : 'kontakty'}`} 
-                    className="text-sm tracking-[0.12em] uppercase hover:text-brand-accent transition-colors"
+                    className="text-sm tracking-[0.12em] uppercase hover:text-brand-accent transition-colors text-white/90 font-medium"
                   >
                     {item}
                   </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
             
             <div>
               <h3 className="text-[10px] tracking-[0.12em] uppercase text-brand-accent mb-4">Связь</h3>
-              <a href={SALON_INFO.phoneLink} className="text-sm font-light hover:text-brand-accent transition-colors">
+              <a href={SALON_INFO.phoneLink} className="text-sm font-medium text-white/90 hover:text-brand-accent transition-colors block">
                 {SALON_INFO.phone}
               </a>
             </div>
