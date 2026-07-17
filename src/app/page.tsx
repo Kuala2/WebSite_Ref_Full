@@ -10,7 +10,7 @@ import Accordion from "@/components/UI/Accordion";
 export default function Home() {
   const previewMasters = MASTERS.slice(0, 3);
   const previewReviews = REVIEWS.slice(0, 3);
-  const previewWorks = ["/images/work-1.webp", "/images/work-2.webp", "/images/work-3.webp", "/images/work-4.webp"];
+  const previewWorks = ["/images/work_airtouch.webp", "/images/work_french.webp", "/images/work_crop.webp", "/images/work_powder.webp"];
 
   return (
     <div className="w-full bg-brand-cream text-brand-dark selection:bg-brand-accent selection:text-white">
@@ -22,7 +22,7 @@ export default function Home() {
           <WarmImage 
             src="/images/hero.webp"
             alt="Интерьер салона Стенс" 
-            fill 
+            fill
             priority 
             className="object-cover" 
           />

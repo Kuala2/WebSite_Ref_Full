@@ -46,6 +46,7 @@ export default function ServicesCatalogPage() {
                     alt={`Стенс: ${service.title}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={index === 0}
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                 </Link>

@@ -17,6 +17,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: "Стенс — салон красоты в Нижнем Новгороде",
   description: "Премиальный салон красоты в Нижнем Новгороде: умные стрижки, сложное окрашивание, маникюр и перманентный макияж. Запишитесь на удобное время.",
   openGraph: {

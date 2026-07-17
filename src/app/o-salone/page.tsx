@@ -78,10 +78,11 @@ export default function AboutPage() {
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm">
                 <WarmImage
                   src="/images/interior-2.jpg"
-                  alt="Стерилизация и материалы"
+                  alt="Безопасность и косметика в Стенс"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover opacity-90"
+                  className="object-cover"
+                  priority
                 />
             </div>
 
