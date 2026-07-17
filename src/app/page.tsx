@@ -125,7 +125,7 @@ export default function Home() {
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Услуги и цены
             </h2>
-            <Link href="#uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
+            <Link href="/uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-cream/20">
               Посмотреть меню &rarr;
             </Link>
           </div>
@@ -156,7 +156,7 @@ export default function Home() {
                   {service.description}
                 </p>
                 
-                <Link href="#uslugi" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors flex items-center">
+                <Link href={`/uslugi/${service.slug}`} className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors flex items-center">
                   Подробнее
                 </Link>
               </div>
@@ -171,7 +171,7 @@ export default function Home() {
           <h2 className="font-serif-display text-4xl md:text-5xl mb-12">
             Наши работы
           </h2>
-          <Link href="#raboty" className="inline-block border border-brand-dark/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.1em] hover:bg-brand-dark hover:text-brand-cream transition-colors rounded-sm">
+          <Link href="/raboty" className="inline-block border border-brand-dark/20 px-8 py-4 text-sm font-medium uppercase tracking-[0.1em] hover:bg-brand-dark hover:text-brand-cream transition-colors rounded-sm">
             Смотреть галерею
           </Link>
         </div>
@@ -192,7 +192,7 @@ export default function Home() {
             <h2 className="font-serif-display text-4xl md:text-5xl">
               Команда мастеров
             </h2>
-            <Link href="#komanda" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
+            <Link href="/o-salone" className="text-[10px] uppercase tracking-[0.12em] hover:text-brand-accent transition-colors pb-2 border-b border-brand-dark/20">
               Вся команда &rarr;
             </Link>
           </div>
@@ -234,7 +234,7 @@ export default function Home() {
         
         <div className="flex flex-col gap-12 items-center relative z-10">
           <Link 
-            href="#zapis" 
+            href="/kontakty#zapis" 
             className="bg-brand-bordeaux hover:bg-brand-bordeaux/90 text-brand-cream px-12 py-5 text-lg md:text-xl font-medium transition-all duration-300 rounded-sm shadow-xl hover:-translate-y-1"
           >
             Онлайн-запись

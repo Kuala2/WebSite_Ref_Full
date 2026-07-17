@@ -10,10 +10,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "Услуги", href: "#uslugi" },
-    { name: "Работы", href: "#raboty" },
-    { name: "О салоне", href: "#komanda" },
-    { name: "Контакты", href: "#zapis" },
+    { name: "Услуги", href: "/uslugi" },
+    { name: "Работы", href: "/raboty" },
+    { name: "О салоне", href: "/o-salone" },
+    { name: "Контакты", href: "/kontakty" },
   ];
 
   const handleLinkClick = () => {
