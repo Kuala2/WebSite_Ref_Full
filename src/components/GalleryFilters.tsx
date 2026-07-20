@@ -5,11 +5,11 @@ import WarmImage from "@/components/UI/WarmImage";
 import { GALLERY_WORKS } from "@/constants/data";
 
 const FILTERS = [
- { key: "all", name: "Все" },
- { key: "okrashivanie", name: "Окрашивание" },
- { key: "strizhki", name: "Стрижки" },
- { key: "nogti", name: "Ногти" },
- { key: "brovi", name: "Брови и перманент" },
+ { key: "all", name: "Все работы" },
+ { key: "okrashivanie", name: "Окрашивание волос" },
+ { key: "strizhki", name: "Стрижки и укладки" },
+ { key: "manikyur-pedikyur", name: "Маникюр и педикюр" },
+ { key: "permanent", name: "Брови и перманент" },
 ];
 
 export default function GalleryFilters() {

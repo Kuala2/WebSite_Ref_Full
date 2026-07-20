@@ -74,9 +74,9 @@ export const ADVANTAGES = [
 
 export const TOP_SERVICES = [
   {
-    title: "Сложное окрашивание",
+    title: "Окрашивание волос",
     description: "AirTouch, шатуш, балаяж и идеальный тотальный блонд без повреждения структуры волос.",
-    priceFrom: "6 500 ₽",
+    priceFrom: "3 500 ₽",
     image: "/images/service-color.webp",
     slug: "okrashivanie",
   },
@@ -427,25 +427,25 @@ export const GALLERY_WORKS = [
     image: "/images/work_crop.webp",
   },
   {
-    category: "nogti",
+    category: "manikyur-pedikyur",
     title: "Нюдовый минимализм",
     description: "Идеальные блики и выравнивание базы",
     image: "/images/work_nude.webp",
   },
   {
-    category: "nogti",
+    category: "manikyur-pedikyur",
     title: "Элегантный французский маникюр",
     description: "Идеальная линия улыбки на миндалевидной форме",
     image: "/images/work_french.webp",
   },
   {
-    category: "brovi",
+    category: "permanent",
     title: "Пудровые брови",
     description: "Теневой пиксельный эффект, форма по золотому сечению",
     image: "/images/work_powder.webp",
   },
   {
-    category: "brovi",
+    category: "permanent",
     title: "Ламинирование ресниц с ботоксом",
     description: "Выразительный изгиб и уплотнение каждой реснички",
     image: "/images/work_lashes.webp",
