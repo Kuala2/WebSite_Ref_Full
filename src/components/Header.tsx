@@ -12,11 +12,14 @@ export default function Header() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -32,8 +35,8 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#F4EFE7] text-[#2A211B] transition-all duration-300 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-50">
+    <header className="sticky top-0 z-[100] w-full bg-[#F4EFE7] text-[#2A211B] transition-all duration-300 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-[100]">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
