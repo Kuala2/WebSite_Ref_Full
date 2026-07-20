@@ -15,6 +15,7 @@ export default function WarmImage({ className, fill, width, height, alt, sizes, 
         height={height}
         sizes={defaultSizes}
         unoptimized={true}
+        loading="eager"
         className={`warm-img ${fill ? 'object-cover' : 'w-full h-auto'}`} 
       />
       <div className="absolute inset-0 bg-[#BEA082] opacity-10 pointer-events-none" />
