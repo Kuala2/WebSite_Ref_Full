@@ -454,6 +454,6 @@ export const GALLERY_WORKS = [
     category: "strizhki",
     title: "Идеальные волны",
     description: "Здоровый блонд и премиальный уход",
-    image: "/images/work_waves.webp",
+    image: "/images/work_waves.jpg",
   },
 ];
