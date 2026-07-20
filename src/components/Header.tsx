@@ -109,11 +109,32 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`md:hidden fixed inset-0 z-40 bg-[#F4EFE7] transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] flex flex-col ${
+        className={`md:hidden fixed inset-0 z-[100] bg-[#F4EFE7] transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] flex flex-col ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
-        <div className="flex flex-col h-full pt-32 px-6 pb-12 overflow-y-auto">
+        {/* Overlay Header (Logo + Close) */}
+        <div className="flex justify-between items-center h-24 px-4 sm:px-6">
+          <Link 
+            href="/" 
+            className="font-serif-display text-4xl font-bold text-[#2A211B] tracking-tight hover:text-[#6E2A2A] transition-colors"
+            onClick={handleLinkClick}
+          >
+            Стенс
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            type="button"
+            className="inline-flex items-center justify-center p-1 text-[#2A211B] min-h-[44px] min-w-[44px] transition-all duration-300 border border-[#2A211B] rounded-sm"
+          >
+            <span className="sr-only">Закрыть меню</span>
+            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="flex flex-col h-full pt-8 px-6 pb-12 overflow-y-auto">
           <nav className="flex flex-col items-center space-y-10 mt-4">
             {navLinks.map((link, idx) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
