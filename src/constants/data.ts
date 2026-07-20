@@ -49,8 +49,8 @@ export const SALON_INFO = {
   rating: 4.9,
   reviewsCount: "180+",
   bookingUrl: "https://dikidi.net/", // placeholder for booking integration
-  vkUrl: "https://vk.com/",
-  tgUrl: "https://t.me/",
+  vkUrl: "https://vk.ru/george_5",
+  tgUrl: "",
 };
 
 export const ADVANTAGES = [
@@ -214,7 +214,7 @@ export const REVIEWS: Review[] = [
 export const MAIN_FAQS = [
   {
     question: "Как записаться в салон?",
-    answer: "Вы можете записаться онлайн в любое время суток, нажав кнопку «Записаться онлайн» на сайте. Также мы принимаем записи по телефону 8 (831) 283-54-12 или в сообщениях нашей группы ВКонтакте с 10:00 до 20:00.",
+    answer: "Вы можете записаться онлайн в любое время суток, нажав кнопку «Записаться онлайн» на сайте. Также мы принимаем записи по телефону 8 (831) 000-00-00 или в сообщениях нашей группы ВКонтакте с 10:00 до 20:00.",
   },
   {
     question: "Можно ли отменить или перенести запись?",

@@ -24,24 +24,28 @@ export default function Footer() {
             </p>
             {/* Social Icons */}
             <div className="flex space-x-6">
-              <a
-                href={SALON_INFO.vkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
-                aria-label="ВКонтакте"
-              >
-                ВКонтакте
-              </a>
-              <a
-                href={SALON_INFO.tgUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
-                aria-label="Telegram"
-              >
-                Телеграм
-              </a>
+              {SALON_INFO.vkUrl && (
+                <a
+                  href={SALON_INFO.vkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
+                  aria-label="ВКонтакте"
+                >
+                  ВКонтакте
+                </a>
+              )}
+              {SALON_INFO.tgUrl && (
+                <a
+                  href={SALON_INFO.tgUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs uppercase tracking-[0.12em] hover:text-white transition-colors text-[#B8AFA5]"
+                  aria-label="Telegram"
+                >
+                  Telegram
+                </a>
+              )}
             </div>
           </div>
 

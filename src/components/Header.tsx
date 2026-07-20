@@ -164,8 +164,8 @@ export default function Header() {
             style={{ transitionDelay: `${isOpen ? 500 : 0}ms` }}
           >
             <div className="flex gap-8">
-              <a href={SALON_INFO.vkUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">ВКонтакте</a>
-              <a href={SALON_INFO.tgUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">Telegram</a>
+              {SALON_INFO.vkUrl && <a href={SALON_INFO.vkUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">ВКонтакте</a>}
+              {SALON_INFO.tgUrl && <a href={SALON_INFO.tgUrl} className="text-xs tracking-[0.15em] font-semibold uppercase text-[#2A211B] hover:text-[#6E2A2A] transition-colors">Telegram</a>}
             </div>
             <a href={SALON_INFO.phoneLink} className="font-serif-display text-3xl text-[#2A211B] hover:text-[#6E2A2A] transition-colors">
               {SALON_INFO.phone}
