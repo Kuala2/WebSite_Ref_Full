@@ -85,7 +85,7 @@ export default function ContactsPage() {
                 <Button href={SALON_INFO.bookingUrl} variant="primary">
                   Записаться онлайн
                 </Button>
-                <span className="text-xs font-semibold tracking-[0.15em] uppercase text-brand-dark/40 py-1">
+                <span className="text-xs font-bold tracking-[0.15em] uppercase text-brand-dark/80 py-1">
                   или
                 </span>
                 {SALON_INFO.vkUrl && (
