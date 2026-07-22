@@ -36,8 +36,20 @@ export default function ServicesCatalogPage() {
           {SERVICES_DATA.map((service, index) => (
             <div
               key={service.id}
-              className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-24 items-center`}
+              className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-24 items-center`}
             >
+              {/* Title and Price for Mobile */}
+              <div className="w-full md:hidden flex flex-col gap-3">
+                <Link href={`/uslugi/${service.slug}`} className="group inline-block w-fit">
+                  <h2 className="font-serif-display text-3xl text-brand-dark group-hover:text-brand-accent transition-colors">
+                    {service.title}
+                  </h2>
+                </Link>
+                <span className="text-sm font-bold tracking-[0.15em] uppercase text-brand-accent">
+                  от {service.priceFrom}
+                </span>
+              </div>
+
               {/* Image */}
               <div className="w-full md:w-1/2 aspect-[3/4] relative overflow-hidden group rounded-sm">
                 <Link href={`/uslugi/${service.slug}`}>
@@ -52,16 +64,19 @@ export default function ServicesCatalogPage() {
                 </Link>
               </div>
 
-              {/* Text */}
+              {/* Text Block */}
               <div className="w-full md:w-1/2 flex flex-col justify-center">
-                <span className="text-sm md:text-base font-semibold tracking-[0.12em] uppercase text-brand-accent mb-6">
-                  От {service.priceFrom}
-                </span>
-                <Link href={`/uslugi/${service.slug}`} className="group inline-block w-fit">
-                  <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark mb-8 group-hover:text-brand-accent transition-colors">
-                    {service.title}
-                  </h2>
-                </Link>
+                {/* Title and Price for Desktop */}
+                <div className="hidden md:flex flex-col gap-4 mb-8">
+                  <Link href={`/uslugi/${service.slug}`} className="group inline-block w-fit">
+                    <h2 className="font-serif-display text-4xl text-brand-dark group-hover:text-brand-accent transition-colors">
+                      {service.title}
+                    </h2>
+                  </Link>
+                  <span className="text-base font-bold tracking-[0.15em] uppercase text-brand-accent">
+                    от {service.priceFrom}
+                  </span>
+                </div>
                 <p className="text-lg text-brand-dark font-normal leading-relaxed mb-12 max-w-md">
                   {service.description}
                 </p>
