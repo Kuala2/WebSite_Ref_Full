@@ -18,7 +18,7 @@ export default function Home() {
       {/* 1. HERO (TWO COLUMNS) */}
       <section className="w-full grid grid-cols-1 lg:grid-cols-[52%_48%] min-h-[86vh]">
         {/* Левая колонка */}
-        <div className="relative w-full h-[50vh] lg:h-auto min-h-full">
+        <div className="relative w-full h-[25vh] lg:h-auto min-h-full">
           <WarmImage 
             src="/images/hero.webp"
             alt="Интерьер салона Стенс" 
