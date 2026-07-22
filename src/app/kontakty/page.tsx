@@ -28,7 +28,7 @@ export default function ContactsPage() {
   return (
     <div className="pb-32 bg-brand-cream">
       {/* Hero Header */}
-      <section className="pt-32 pb-24 text-center">
+      <section className="pt-32 pb-12 md:pb-24 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
             <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
@@ -81,13 +81,18 @@ export default function ContactsPage() {
               <span className="text-xs font-semibold tracking-[0.12em] uppercase text-brand-accent mb-4 block">Скидка 10% на первый визит</span>
               <h3 className="font-serif-display text-4xl text-brand-dark mb-8">Онлайн-запись 24/7</h3>
               
-              <div className="flex flex-col gap-6 w-full max-w-sm">
+              <div className="flex flex-col gap-4 w-full max-w-sm text-center">
                 <Button href={SALON_INFO.bookingUrl} variant="primary">
                   Записаться онлайн
                 </Button>
-                <Button href={SALON_INFO.vkUrl} variant="outline">
-                  Написать ВКонтакте
-                </Button>
+                <span className="text-xs font-semibold tracking-[0.15em] uppercase text-brand-dark/40 py-1">
+                  или
+                </span>
+                {SALON_INFO.vkUrl && (
+                  <Button href={SALON_INFO.vkUrl} variant="outline">
+                    Написать ВКонтакте
+                  </Button>
+                )}
               </div>
             </div>
           </div>
