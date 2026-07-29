@@ -18,7 +18,7 @@ export default function Home() {
     <div className="home-page">
       <section className="home-intro" aria-labelledby="home-title">
         <Image
-          src="/images/hero.webp"
+          src="/images/hero-cinematic-v2.webp"
           alt="Мастер салона «Стенс» работает с клиенткой"
           fill
           priority
