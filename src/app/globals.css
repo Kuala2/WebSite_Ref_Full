@@ -2329,39 +2329,33 @@ button {
   }
 
   .home-intro {
-    min-height: calc(100svh - var(--header-height));
+    min-height: 0;
   }
 
   .home-intro-image {
-    object-position: 62% center;
+    object-position: 64% center;
   }
 
   .home-intro-scrim {
     background:
-      linear-gradient(180deg, rgba(10, 14, 12, 0.42) 0%, rgba(10, 14, 12, 0.08) 34%, rgba(10, 14, 12, 0.46) 66%, rgba(10, 14, 12, 0.92) 100%),
-      linear-gradient(90deg, rgba(10, 14, 12, 0.52) 0%, rgba(10, 14, 12, 0.08) 88%);
+      linear-gradient(180deg, rgba(10, 14, 12, 0.42) 0%, rgba(10, 14, 12, 0.07) 44%, rgba(10, 14, 12, 0.48) 100%),
+      linear-gradient(90deg, rgba(10, 14, 12, 0.54) 0%, rgba(10, 14, 12, 0.08) 88%);
   }
 
   .home-intro-frame {
-    min-height: calc(100svh - var(--header-height));
-    display: flex;
-    flex-direction: column;
-    padding: 18px 0 22px;
+    min-height: 0;
+    display: block;
+    padding: 18px 0 0;
   }
 
   .home-intro-kicker {
-    flex: 0 0 auto;
     font-size: 10px;
     letter-spacing: 0.09em;
   }
 
   .home-intro-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 28px;
-    padding: clamp(142px, 27svh, 210px) 0 0;
+    display: block;
+    padding: clamp(100px, 16svh, 132px) 0 0;
   }
 
   .home-intro-content h1 {
@@ -2377,25 +2371,33 @@ button {
   }
 
   .home-intro-copy {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
+    width: calc(100% + 32px);
+    max-width: none;
+    margin: clamp(118px, 18svh, 150px) -16px 0;
+    padding: 22px 16px 20px;
     border: 0;
-    background: transparent;
+    background: rgba(245, 241, 233, 0.97);
+    color: var(--ink);
     backdrop-filter: none;
+    box-shadow: 0 -18px 44px rgba(4, 8, 6, 0.14);
   }
 
   .home-intro-text {
-    display: none;
+    max-width: 350px;
+    display: block;
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .home-intro-mobile-facts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     padding: 14px 0 13px;
-    border-top: 1px solid rgba(255, 253, 248, 0.34);
-    border-bottom: 1px solid rgba(255, 253, 248, 0.24);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
 
   .home-intro-mobile-facts span {
@@ -2407,11 +2409,11 @@ button {
 
   .home-intro-mobile-facts span:not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid rgba(255, 253, 248, 0.2);
+    border-left: 1px solid var(--line);
   }
 
   .home-intro-mobile-facts strong {
-    color: var(--white);
+    color: var(--ink);
     font-family: var(--font-display), Georgia, serif;
     font-size: clamp(22px, 6.6vw, 26px);
     font-weight: 550;
@@ -2420,7 +2422,7 @@ button {
   }
 
   .home-intro-mobile-facts small {
-    color: rgba(255, 253, 248, 0.68);
+    color: var(--muted);
     font-size: 10px;
     line-height: 1.35;
   }
