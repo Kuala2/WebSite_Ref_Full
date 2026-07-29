@@ -2325,90 +2325,78 @@ button {
   }
 
   .home-intro-image {
-    object-position: 61% center;
+    object-position: 62% center;
   }
 
   .home-intro-scrim {
     background:
-      linear-gradient(0deg, rgba(12, 17, 15, 0.9) 0%, rgba(12, 17, 15, 0.52) 62%, rgba(12, 17, 15, 0.24) 100%),
-      linear-gradient(90deg, rgba(12, 17, 15, 0.34), transparent);
+      linear-gradient(180deg, rgba(10, 14, 12, 0.42) 0%, rgba(10, 14, 12, 0.08) 34%, rgba(10, 14, 12, 0.46) 66%, rgba(10, 14, 12, 0.92) 100%),
+      linear-gradient(90deg, rgba(10, 14, 12, 0.52) 0%, rgba(10, 14, 12, 0.08) 88%);
   }
 
   .home-intro-frame {
     min-height: calc(100svh - var(--header-height));
-    padding: 18px 0 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0 22px;
   }
 
   .home-intro-kicker {
+    flex: 0 0 auto;
     font-size: 10px;
     letter-spacing: 0.09em;
   }
 
   .home-intro-content {
-    gap: 22px;
-    padding: 38px 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+    padding: clamp(142px, 27svh, 210px) 0 0;
   }
 
   .home-intro-content h1 {
+    width: 100%;
     max-width: 100%;
-    font-size: clamp(48px, 14.5vw, 60px);
-    line-height: 0.86;
+    font-size: clamp(47px, 14vw, 56px);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
   }
 
   .home-intro-content h1 em {
-    margin-top: 0.14em;
+    margin-top: 0.1em;
   }
 
   .home-intro-copy {
+    width: 100%;
     max-width: 100%;
-    padding: 18px;
-    background: rgba(16, 21, 18, 0.68);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
   }
 
   .home-intro-text {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .home-intro-actions {
-    gap: 8px;
-    margin-top: 18px;
-  }
-
-  .home-intro-actions .ui-button,
-  .home-intro-actions .readable-link {
-    min-height: 52px;
-  }
-
-  .home-intro-meta {
-    align-items: flex-start;
-    gap: 14px;
-    padding-top: 12px;
-    font-size: 10px;
-  }
-
-  .home-intro-meta > div:first-child {
     display: none;
   }
 
-  .home-intro-facts {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+  .home-intro-actions {
+    margin-top: 0;
   }
 
-  .home-intro-facts strong {
-    font-size: 18px;
+  .home-intro-actions .ui-button {
+    min-height: 60px;
+    padding-inline: 20px;
   }
 
-  .home-intro-facts span {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    font-size: 10px;
-    white-space: normal;
+  .home-intro-actions .readable-link,
+  .home-intro-meta {
+    display: none;
+  }
+
+  .home-intro-actions .ui-button--primary {
+    box-shadow: 0 12px 32px rgba(4, 8, 6, 0.24);
   }
 
   .home-services,
