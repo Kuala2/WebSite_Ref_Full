@@ -513,6 +513,10 @@ button {
   line-height: 1.65;
 }
 
+.home-intro-mobile-facts {
+  display: none;
+}
+
 .home-intro-actions {
   display: flex;
   align-items: stretch;
@@ -549,14 +553,18 @@ button {
 }
 
 .home-intro-facts span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
   white-space: nowrap;
 }
 
 .home-intro-facts strong {
   color: var(--white);
   font-family: var(--font-display), Georgia, serif;
-  font-size: 22px;
+  font-size: clamp(30px, 2.15vw, 40px);
   font-weight: 550;
+  letter-spacing: -0.035em;
 }
 
 .home-services,
@@ -2379,6 +2387,42 @@ button {
 
   .home-intro-text {
     display: none;
+  }
+
+  .home-intro-mobile-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 12px;
+    padding: 14px 0 13px;
+    border-top: 1px solid rgba(255, 253, 248, 0.34);
+    border-bottom: 1px solid rgba(255, 253, 248, 0.24);
+  }
+
+  .home-intro-mobile-facts span {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .home-intro-mobile-facts span:not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 253, 248, 0.2);
+  }
+
+  .home-intro-mobile-facts strong {
+    color: var(--white);
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(22px, 6.6vw, 26px);
+    font-weight: 550;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .home-intro-mobile-facts small {
+    color: rgba(255, 253, 248, 0.68);
+    font-size: 10px;
+    line-height: 1.35;
   }
 
   .home-intro-actions {

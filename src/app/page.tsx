@@ -43,6 +43,20 @@ export default function Home() {
                 Точные стрижки, живой цвет и деликатные детали — с учётом вашего
                 характера, привычек и ритма жизни.
               </p>
+              <div className="home-intro-mobile-facts" aria-label="О салоне">
+                <span>
+                  <strong>{SALON_INFO.rating}</strong>
+                  <small>рейтинг</small>
+                </span>
+                <span>
+                  <strong>{SALON_INFO.reviewsCount}</strong>
+                  <small>отзывов</small>
+                </span>
+                <span>
+                  <strong>с 2018</strong>
+                  <small>в Нижнем</small>
+                </span>
+              </div>
               <div className="home-intro-actions">
                 <Link
                   className="ui-button ui-button--primary"
