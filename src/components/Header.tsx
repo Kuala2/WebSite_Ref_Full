@@ -2,27 +2,34 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SALON_INFO } from "@/constants/data";
 
 const navLinks = [
-  { name: "Услуги", href: "/#services" },
-  { name: "Работы", href: "/#works" },
-  { name: "Мастера", href: "/#team" },
-  { name: "Контакты", href: "/#contact" },
+  { name: "Услуги", note: "цены и процедуры", href: "/uslugi" },
+  { name: "Работы", note: "портфолио мастеров", href: "/raboty" },
+  { name: "О салоне", note: "команда и подход", href: "/o-salone" },
+  { name: "Контакты", note: "адрес и запись", href: "/kontakty" },
 ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", isOpen);
     return () => document.body.classList.remove("menu-open");
   }, [isOpen]);
 
+  useEffect(() => setIsOpen(false), [pathname]);
+
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link className="wordmark" href="/" onClick={() => setIsOpen(false)}>
+        <Link className="wordmark" href="/" aria-label="Стенс — главная">
           Стенс
         </Link>
 
@@ -34,16 +41,20 @@ export default function Header() {
 
         <nav className="desktop-nav" aria-label="Основная навигация">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
+            <Link
+              key={link.href}
+              href={link.href}
+              className={isActive(link.href) ? "is-active" : ""}
+            >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        <a className="header-booking" href={SALON_INFO.bookingUrl}>
+        <Link className="header-booking" href="/kontakty#zapis">
           Записаться
           <span aria-hidden="true">↗</span>
-        </a>
+        </Link>
 
         <button
           className="menu-toggle"
@@ -59,23 +70,28 @@ export default function Header() {
 
       <div className={`mobile-menu ${isOpen ? "is-open" : ""}`}>
         <nav aria-label="Мобильная навигация">
-          {navLinks.map((link, index) => (
+          <Link className={pathname === "/" ? "is-active" : ""} href="/">
+            <span className="mobile-nav-name">Главная</span>
+            <span className="mobile-nav-note">коротко о главном</span>
+          </Link>
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              className={isActive(link.href) ? "is-active" : ""}
             >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {link.name}
+              <span className="mobile-nav-name">{link.name}</span>
+              <span className="mobile-nav-note">{link.note}</span>
             </Link>
           ))}
         </nav>
+
         <div className="mobile-menu-footer">
           <a href={SALON_INFO.phoneLink}>{SALON_INFO.phone}</a>
           <p>{SALON_INFO.address}</p>
-          <a className="button button-accent" href={SALON_INFO.bookingUrl}>
-            Выбрать время
-          </a>
+          <Link className="button button-accent" href="/kontakty#zapis">
+            Выбрать время <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </div>
     </header>

@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     images: [
       {
-        url: "/og.png",
-        width: 1730,
-        height: 909,
+        url: "/og-v2.png",
+        width: 1729,
+        height: 910,
         alt: "Стенс — красота, которая остаётся вашей",
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Стенс — красота, которая остаётся вашей",
     description: "Салон красоты в Нижнем Новгороде.",
-    images: ["/og.png"],
+    images: ["/og-v2.png"],
   },
 };
 

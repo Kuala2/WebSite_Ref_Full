@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Accordion from "@/components/UI/Accordion";
 import MobileStickyCTA from "@/components/UI/MobileStickyCTA";
+import MasterCard from "@/components/UI/MasterCard";
 import {
   MAIN_FAQS,
   MASTERS,
@@ -9,294 +9,225 @@ import {
   SALON_INFO,
   TOP_SERVICES,
 } from "@/constants/data";
+import Accordion from "@/components/UI/Accordion";
 
-const works = [
-  { src: "/images/work_airtouch.webp", label: "AirTouch" },
-  { src: "/images/work_french.webp", label: "Маникюр" },
-  { src: "/images/work_crop.webp", label: "Умная стрижка" },
-  { src: "/images/work_powder.webp", label: "Брови" },
-  { src: "/images/work_waves.jpg", label: "Укладка" },
+const previewWorks = [
+  { src: "/images/work_airtouch.webp", title: "Мягкий AirTouch" },
+  { src: "/images/work_french.webp", title: "Чистый френч" },
+  { src: "/images/work_crop.webp", title: "Точная форма" },
+  { src: "/images/work_powder.webp", title: "Пудровые брови" },
 ];
 
 export default function Home() {
   return (
-    <div className="landing">
+    <div className="home-page">
       <MobileStickyCTA />
 
-      <section className="home-hero" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <div className="hero-kicker">
-            <span>Салон красоты</span>
-            <span>Нижний Новгород</span>
-          </div>
-
-          <h1 id="hero-title">
-            Красота,
-            <br />
-            которая остаётся
-            <br />
-            <em>вашей.</em>
+      <section className="home-intro" aria-labelledby="home-title">
+        <div className="home-intro-copy">
+          <p className="section-label">Салон красоты · Нижний Новгород</p>
+          <h1 id="home-title">
+            Красота, которая остаётся <em>вашей.</em>
           </h1>
-
-          <p className="hero-lead">
-            Точные стрижки, живой цвет и деликатные детали — без масок,
-            шаблонов и попыток сделать вас кем-то другим.
+          <p className="home-intro-text">
+            Точные стрижки, живой цвет и деликатные детали. Мы не меняем вас —
+            только подчёркиваем то, что уже красиво.
           </p>
-
-          <div className="hero-actions">
-            <a className="button button-dark" href={SALON_INFO.bookingUrl}>
-              Выбрать время
+          <div className="home-intro-actions">
+            <Link className="ui-button ui-button--primary" href="/kontakty#zapis">
+              <span>Записаться</span>
               <span aria-hidden="true">↗</span>
-            </a>
-            <a className="text-link" href={SALON_INFO.phoneLink}>
-              {SALON_INFO.phone}
-            </a>
+            </Link>
+            <Link className="readable-link" href="/uslugi">
+              Посмотреть услуги и цены
+            </Link>
           </div>
-
-          <div className="hero-proof" aria-label="Коротко о салоне">
+          <div className="home-intro-facts" aria-label="О салоне">
             <div>
               <strong>{SALON_INFO.rating}</strong>
-              <span>рейтинг гостей</span>
+              <span>рейтинг</span>
             </div>
             <div>
               <strong>{SALON_INFO.reviewsCount}</strong>
-              <span>живых отзывов</span>
+              <span>отзывов</span>
             </div>
             <div>
-              <strong>8 лет</strong>
-              <span>работаем с вами</span>
+              <strong>с 2018</strong>
+              <span>в Нижнем</span>
             </div>
           </div>
         </div>
 
-        <div className="hero-visual">
+        <div className="home-intro-photo">
           <Image
             src="/images/hero.webp"
-            alt="Мастер работает с клиенткой в салоне «Стенс»"
+            alt="Мастер салона «Стенс» работает с клиенткой"
             fill
             priority
-            sizes="(max-width: 900px) 100vw, 46vw"
+            sizes="(max-width: 900px) 100vw, 48vw"
             className="cover-image"
           />
-          <div className="hero-visual-shade" />
-          <div className="hero-vertical-note">STENS · BEAUTY SALON · 2018</div>
-          <div className="hero-place">
-            <span>01</span>
-            <p>
-              Большая Покровская, 58
-              <br />
-              пять минут от м. Горьковская
-            </p>
+          <div className="photo-caption">
+            <span>Большая Покровская, 58</span>
+            <span>5 минут от м. Горьковская</span>
           </div>
         </div>
       </section>
 
-      <section className="manifesto" aria-label="Наш подход">
-        <div className="section-shell manifesto-grid">
-          <p className="eyebrow eyebrow-light">Наш принцип</p>
-          <div>
-            <h2>
-              Не «новая вы».
-              <br />
-              <em>Вы — только точнее.</em>
-            </h2>
-            <p className="manifesto-copy">
-              Сначала слушаем, потом предлагаем. Учитываем привычки, темп жизни,
-              форму лица и то, как волосы ведут себя дома — не только в кресле
-              мастера.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="services-section" id="services">
+      <section className="home-services" aria-labelledby="services-title">
         <div className="section-shell">
-          <div className="section-heading">
+          <div className="readable-heading">
             <div>
-              <p className="eyebrow">Что мы делаем</p>
-              <h2>
-                Всё для образа.
-                <br />
-                <em>Ничего лишнего.</em>
-              </h2>
+              <p className="section-label">Услуги</p>
+              <h2 id="services-title">С чего начнём?</h2>
             </div>
-            <p>
-              Честные цены «от» и бесплатная консультация перед сложными
-              процедурами.
-            </p>
+            <div>
+              <p>
+                Выберите направление — на отдельной странице есть полный прайс,
+                описание процедуры и подходящие мастера.
+              </p>
+              <Link className="readable-link" href="/uslugi">
+                Все услуги и цены
+              </Link>
+            </div>
           </div>
 
-          <div className="services-layout">
-            <figure className="services-photo">
-              <div className="services-photo-media">
-                <Image
-                  src="/images/service-color.webp"
-                  alt="Процесс окрашивания волос в салоне"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 42vw"
-                  className="cover-image"
-                />
-              </div>
-              <figcaption>
-                <span>Премиальные составы</span>
-                <span>Lebel · Keune</span>
-              </figcaption>
-            </figure>
-
-            <div className="services-list">
-              {TOP_SERVICES.map((service, index) => (
-                <article className="service-row" key={service.slug}>
-                  <div className="service-index">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-                  <div className="service-main">
-                    <div className="service-title-line">
-                      <h3>{service.title}</h3>
-                      <strong>от {service.priceFrom}</strong>
-                    </div>
+          <div className="service-preview-grid">
+            {TOP_SERVICES.map((service) => (
+              <Link
+                className="service-preview-card"
+                href={`/uslugi/${service.slug}`}
+                key={service.slug}
+              >
+                <div className="service-preview-photo">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 700px) 100vw, 50vw"
+                    className="cover-image"
+                  />
+                </div>
+                <div className="service-preview-copy">
+                  <div>
+                    <h3>{service.title}</h3>
                     <p>{service.description}</p>
-                    <a href={SALON_INFO.bookingUrl}>
-                      Записаться
-                      <span aria-hidden="true">↗</span>
-                    </a>
                   </div>
-                </article>
-              ))}
-            </div>
+                  <div className="service-preview-price">
+                    <strong>от {service.priceFrom}</strong>
+                    <span aria-hidden="true">↗</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="works-section" id="works">
-        <div className="section-shell">
-          <div className="works-heading">
-            <div>
-              <p className="eyebrow eyebrow-light">Недавние работы</p>
-              <h2>
-                Сделано руками.
-                <br />
-                <em>Подходит именно вам.</em>
-              </h2>
-            </div>
-            <p>Без фотостоков и чужих референсов — только работа наших мастеров.</p>
-          </div>
+      <section className="home-approach">
+        <div className="home-approach-photo">
+          <Image
+            src="/images/interior-1.jpg"
+            alt="Интерьер салона «Стенс»"
+            fill
+            sizes="(max-width: 900px) 100vw, 52vw"
+            className="cover-image"
+          />
+        </div>
+        <div className="home-approach-copy">
+          <p className="section-label">Наш подход</p>
+          <h2>
+            Сначала слушаем.
+            <br />
+            Потом предлагаем.
+          </h2>
+          <p className="home-approach-lead">
+            Учитываем привычки, темп жизни и то, как результат будет выглядеть
+            не только в кресле, но и дома.
+          </p>
+          <ul className="home-values">
+            <li>
+              <strong>Безопасно</strong>
+              <span>Четыре этапа стерилизации инструмента.</span>
+            </li>
+            <li>
+              <strong>Профессионально</strong>
+              <span>Опыт мастеров от 8 лет и постоянное обучение.</span>
+            </li>
+            <li>
+              <strong>Без спешки</strong>
+              <span>Время мастера полностью принадлежит вам.</span>
+            </li>
+          </ul>
+          <Link className="readable-link readable-link--light" href="/o-salone">
+            О салоне и команде
+          </Link>
+        </div>
+      </section>
 
-          <div className="works-grid">
-            {works.map((work, index) => (
-              <figure className={`work work-${index + 1}`} key={work.src}>
+      <section className="home-works">
+        <div className="section-shell">
+          <div className="readable-heading">
+            <div>
+              <p className="section-label section-label--light">Портфолио</p>
+              <h2>Работы наших мастеров</h2>
+            </div>
+            <div>
+              <p>Результаты без фотостоков и чужих референсов.</p>
+              <Link className="readable-link readable-link--light" href="/raboty">
+                Открыть всю галерею
+              </Link>
+            </div>
+          </div>
+          <div className="work-preview-grid">
+            {previewWorks.map((work) => (
+              <figure key={work.src}>
                 <Image
                   src={work.src}
-                  alt={work.label}
+                  alt={work.title}
                   fill
-                  sizes="(max-width: 700px) 100vw, 40vw"
+                  sizes="(max-width: 700px) 82vw, 25vw"
                   className="cover-image"
                 />
-                <figcaption>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  {work.label}
-                </figcaption>
+                <figcaption>{work.title}</figcaption>
               </figure>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="care-section">
-        <div className="care-image">
-          <Image
-            src="/images/interior-1.jpg"
-            alt="Светлый интерьер салона «Стенс»"
-            fill
-            sizes="(max-width: 900px) 100vw, 52vw"
-            className="cover-image"
-          />
-        </div>
-        <div className="care-copy">
-          <p className="eyebrow">Сервис — это тоже результат</p>
-          <h2>
-            Здесь можно
-            <br />
-            <em>выдохнуть.</em>
-          </h2>
-          <p className="care-intro">
-            Мы собрали пространство, где забота не звучит как рекламное
-            обещание — она просто происходит.
-          </p>
-          <ul>
-            <li>
-              <span>01</span>
-              <div>
-                <strong>Безопасность без компромиссов</strong>
-                <p>Четыре этапа стерилизации и пакет, который вскрывают при вас.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Мастера, которые продолжают учиться</strong>
-                <p>Новые техники — только после практики и строгой проверки.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Время, которое принадлежит вам</strong>
-                <p>Без конвейера, спешки и параллельной работы с другим гостем.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="team-section" id="team">
+      <section className="home-team">
         <div className="section-shell">
-          <div className="team-heading">
-            <p className="eyebrow eyebrow-light">Люди «Стенс»</p>
-            <h2>
-              Хороший результат
-              <br />
-              начинается с <em>доверия.</em>
-            </h2>
+          <div className="readable-heading">
+            <div>
+              <p className="section-label">Команда</p>
+              <h2>Мастера, которым доверяют</h2>
+            </div>
+            <div>
+              <p>У каждого — своя сильная специализация и опыт от 8 лет.</p>
+              <Link className="readable-link" href="/o-salone#team">
+                Познакомиться со всей командой
+              </Link>
+            </div>
           </div>
-
-          <div className="team-grid">
-            {MASTERS.slice(0, 3).map((master, index) => (
-              <article className="team-card" key={master.id}>
-                <div className="team-photo">
-                  <Image
-                    src={master.image}
-                    alt={master.name}
-                    fill
-                    sizes="(max-width: 700px) 100vw, 33vw"
-                    className="cover-image"
-                  />
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <div className="team-meta">
-                  <div>
-                    <h3>{master.name}</h3>
-                    <p>{master.role}</p>
-                  </div>
-                  <span>{master.experience}</span>
-                </div>
-              </article>
+          <div className="home-team-grid">
+            {MASTERS.slice(0, 3).map((master) => (
+              <MasterCard master={master} compact key={master.id} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="review-section" aria-label="Отзывы клиентов">
-        <div className="section-shell review-layout">
-          <div className="review-score">
-            <span>Яндекс Карты</span>
+      <section className="home-review">
+        <div className="section-shell home-review-grid">
+          <div className="home-review-score">
+            <p>Яндекс Карты</p>
             <strong>{SALON_INFO.rating}</strong>
-            <div aria-label="5 звёзд">★★★★★</div>
-            <p>{SALON_INFO.reviewsCount} отзывов</p>
+            <span aria-label="5 звёзд">★★★★★</span>
+            <small>{SALON_INFO.reviewsCount} отзывов</small>
           </div>
-
           <blockquote>
-            <span className="quote-mark">“</span>
-            <p>{REVIEWS[0].text}</p>
+            <p>“{REVIEWS[0].text}”</p>
             <footer>
               <strong>{REVIEWS[0].name}</strong>
               <span>{REVIEWS[0].procedure}</span>
@@ -305,25 +236,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq-section">
-        <div className="section-shell faq-layout">
+      <section className="home-faq">
+        <div className="section-shell home-faq-grid">
           <div>
-            <p className="eyebrow">Перед первым визитом</p>
-            <h2>
-              Вопросы,
-              <br />
-              <em>которые важны.</em>
-            </h2>
-            <p className="faq-note">
-              Не нашли ответ? Позвоните — администратор всё расскажет без
-              заученных скриптов.
+            <p className="section-label">Перед визитом</p>
+            <h2>Коротко о важном</h2>
+            <p>
+              Остальные вопросы можно задать администратору по телефону или во
+              ВКонтакте.
             </p>
           </div>
-          <Accordion items={MAIN_FAQS} />
+          <Accordion items={MAIN_FAQS.slice(0, 3)} />
         </div>
       </section>
 
-      <section className="booking-section" id="contact">
+      <section className="home-booking">
         <Image
           src="/images/interior-2.jpg"
           alt=""
@@ -331,40 +258,23 @@ export default function Home() {
           sizes="100vw"
           className="cover-image"
         />
-        <div className="booking-overlay" />
-        <div className="section-shell booking-inner">
-          <p className="eyebrow eyebrow-light">Ваше время</p>
-          <h2>
-            Давайте начнём
-            <br />
-            <em>с разговора.</em>
-          </h2>
+        <div className="home-booking-shade" />
+        <div className="section-shell home-booking-copy">
+          <p className="section-label section-label--light">Онлайн-запись 24/7</p>
+          <h2>Выберите удобное время</h2>
           <p>
-            Расскажите, что хочется изменить. Мы подберём мастера, уточним
-            стоимость и найдём удобное окно.
+            Если не уверены в услуге — запишитесь на консультацию. Мастер
+            уточнит задачу и назовёт стоимость до начала работы.
           </p>
-          <div className="booking-actions">
-            <a className="button button-accent" href={SALON_INFO.bookingUrl}>
-              Записаться онлайн
+          <div>
+            <Link className="ui-button ui-button--accent" href="/kontakty#zapis">
+              <span>Записаться онлайн</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
+            <a className="ui-button ui-button--ghost" href={SALON_INFO.phoneLink}>
+              <span>{SALON_INFO.phone}</span>
               <span aria-hidden="true">↗</span>
             </a>
-            <a className="button button-ghost" href={SALON_INFO.phoneLink}>
-              {SALON_INFO.phone}
-            </a>
-          </div>
-          <div className="booking-details">
-            <div>
-              <span>Адрес</span>
-              <strong>{SALON_INFO.address}</strong>
-            </div>
-            <div>
-              <span>График</span>
-              <strong>
-                {SALON_INFO.scheduleWeekdays}
-                <br />
-                {SALON_INFO.scheduleWeekends}
-              </strong>
-            </div>
           </div>
         </div>
       </section>

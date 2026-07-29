@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SALON_INFO } from "@/constants/data";
+import Link from "next/link";
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,10 +15,10 @@ export default function MobileStickyCTA() {
 
   return (
     <div className={`mobile-sticky ${isVisible ? "is-visible" : ""}`}>
-      <a href={SALON_INFO.bookingUrl}>
+      <Link href="/kontakty#zapis">
         Записаться
         <span aria-hidden="true">↗</span>
-      </a>
+      </Link>
     </div>
   );
 }

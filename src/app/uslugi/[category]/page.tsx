@@ -1,233 +1,195 @@
+import Image from "next/image";
 import Link from "next/link";
-import WarmImage from "@/components/UI/WarmImage";
 import { notFound } from "next/navigation";
-import { SERVICES_DATA, MASTERS } from "@/constants/data";
-import PriceTable from "@/components/UI/PriceTable";
+import { MASTERS, SERVICES_DATA } from "@/constants/data";
 import Accordion from "@/components/UI/Accordion";
-import MasterCard from "@/components/UI/MasterCard";
 import Button from "@/components/UI/Button";
+import MasterCard from "@/components/UI/MasterCard";
+import PriceTable from "@/components/UI/PriceTable";
 
 interface PageProps {
   params: Promise<{ category: string }>;
 }
 
 export async function generateStaticParams() {
-  return [
-    { category: "okrashivanie" },
-    { category: "strizhki" },
-    { category: "manikyur-pedikyur" },
-    { category: "permanent" },
-  ];
+  return SERVICES_DATA.map((service) => ({ category: service.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { category } = await params;
-  const service = SERVICES_DATA.find((s) => s.slug === category);
-  
+  const service = SERVICES_DATA.find((item) => item.slug === category);
+
   if (!service) {
-    return {
-      title: "Услуга не найдена — Салон Стенс",
-    };
+    return { title: "Услуга не найдена — Стенс" };
   }
 
   return {
-    title: `${service.title} в Нижнем Новгороде — Салон красоты Стенс`,
+    title: `${service.title} в Нижнем Новгороде — Стенс`,
     description: service.description,
   };
 }
 
 export default async function ServiceCategoryPage({ params }: PageProps) {
   const { category } = await params;
-  const service = SERVICES_DATA.find((s) => s.slug === category);
+  const service = SERVICES_DATA.find((item) => item.slug === category);
 
-  if (!service) {
-    notFound();
-  }
+  if (!service) notFound();
 
-  // Get masters who specialize in this category
   const categoryMasters = MASTERS.filter((master) =>
-    master.categories.includes(category)
+    master.categories.includes(category),
   );
 
   return (
-    <div className="pb-32 bg-brand-cream">
-      {/* Hero */}
-      <section className="pt-32 pb-24 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-[10px] uppercase tracking-[0.12em] text-brand-dark/50 mb-8">
-            <Link href="/" className="hover:text-brand-dark transition-colors">Главная</Link>
-            <span className="mx-4">/</span>
-            <Link href="/uslugi" className="hover:text-brand-dark transition-colors">Услуги</Link>
-            <span className="mx-4">/</span>
-            <span className="text-brand-dark">{service.title}</span>
+    <div className="inner-page service-detail">
+      <section className="service-detail-hero">
+        <div className="section-shell">
+          <nav className="breadcrumbs" aria-label="Хлебные крошки">
+            <Link href="/">Главная</Link>
+            <span>/</span>
+            <Link href="/uslugi">Услуги</Link>
+            <span>/</span>
+            <span>{service.title}</span>
           </nav>
-          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight text-brand-dark mb-12">
-            {service.title}
-          </h1>
-        </div>
-      </section>
-
-      {/* Main Image */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-        <div className="w-full aspect-[21/9] relative overflow-hidden rounded-sm">
-          <WarmImage
-            src={service.image}
-            alt={`Стенс: ${service.title}`}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
-      </section>
-
-      {/* Description */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
-          <div>
-            <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark mb-12">
-              О процедуре
-            </h2>
-            <div className="pt-8">
-              <Button href="/kontakty#zapis" variant="primary">
-                Записаться онлайн
-              </Button>
+          <div className="service-detail-heading">
+            <div>
+              <p className="section-label">Услуга</p>
+              <h1>{service.title}</h1>
+            </div>
+            <div>
+              <strong>от {service.priceFrom}</strong>
+              <p>{service.description}</p>
+              <Button href="/kontakty#zapis">Записаться</Button>
             </div>
           </div>
-          
-          <div className="space-y-8 text-lg text-brand-dark font-normal leading-relaxed">
-            <p className="text-2xl md:text-3xl text-brand-dark font-serif-display leading-tight mb-12">
-              {service.longDescription}
-            </p>
-            
-            {category === "okrashivanie" && (
-              <>
-                <p>
-                  Наши стилисты — эксперты в исправлении некачественных домашних экспериментов, пятен и резких переходов. Мы знаем, как вывести вас из забитого темного пигмента в сияющий блонд без ущерба для структуры волос.
-                </p>
-                <p>
-                  Каждое осветление проводится по щадящей технологии с обязательным применением плексов. Мы используем профессиональную немецкую косметику <strong>Wella Professionals</strong> и люксовые японские уходы <strong>Lebel</strong>, которые увлажняют волосы изнутри.
-                </p>
-              </>
-            )}
-
-            {category === "permanent" && (
-              <>
-                <p>
-                  Мы убеждены, что перманентный макияж должен быть практически незаметен постороннему глазу. Никаких синих или фиолетовых бровей — только воздушное пудровое напыление и акварельная бесконтурная растушевка губ.
-                </p>
-                <p>
-                  Аппликационная анестезия гарантирует 100% безболезненность. Кожа заживает за несколько дней без корок, оставляя естественный благородный оттенок на 1.5–2 года.
-                </p>
-              </>
-            )}
-
-            {category === "strizhki" && (
-              <>
-                <p>
-                  Умные стрижки от «Стенс» создаются с учетом геометрии вашего лица и естественной текстуры волос. Мы делаем срезы так, чтобы волосы сами укладывались в красивую форму после обычного мытья и сушки феном.
-                </p>
-                <p>
-                  Помимо повседневных образов, наши мастера подберут и выполнят вечерние или свадебные укладки, которые гарантированно выдержат любые погодные условия и продержатся до конца праздника.
-                </p>
-              </>
-            )}
-
-            {category === "manikyur-pedikyur" && (
-              <>
-                <p>
-                  Ваше здоровье — наш абсолютный приоритет. Для каждого клиента мы готовим индивидуальный крафт-пакет с металлическими инструментами, прошедшими дезинфекцию и стерилизацию в сухожаровом шкафу ГП-10 по стандартам СанПиН.
-                </p>
-                <p>
-                  Мы работаем на гипоаллергенных материалах премиум-класса (Luxio, Uno) и предлагаем инновационный SMART-педикюр, который возвращает стопам младенческую гладкость без использования грубых лезвий.
-                </p>
-              </>
-            )}
+          <div className="service-detail-cover">
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              priority
+              sizes="100vw"
+              className="cover-image"
+            />
           </div>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-32 border-t border-brand-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-24">
-            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Прайс-лист</h2>
+      <section className="service-about">
+        <div className="section-shell service-about-grid">
+          <div>
+            <p className="section-label">О процедуре</p>
+            <h2>Понятный результат без сюрпризов</h2>
+          </div>
+          <div>
+            <p className="service-about-lead">{service.longDescription}</p>
+            <div className="service-steps">
+              <article>
+                <span>01</span>
+                <h3>Обсуждаем задачу</h3>
+                <p>Уточняем пожелания, привычки и желаемый результат.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Согласуем план</h3>
+                <p>Мастер объясняет этапы, длительность и точную стоимость.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Даём рекомендации</h3>
+                <p>Рассказываем, как сохранить результат дома.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="service-price-section">
+        <div className="section-shell">
+          <div className="readable-heading">
+            <div>
+              <p className="section-label">Стоимость</p>
+              <h2>Прайс-лист</h2>
+            </div>
+            <p>
+              Цены указаны «от». Окончательную стоимость мастер называет после
+              консультации и до начала процедуры.
+            </p>
           </div>
           <PriceTable items={service.prices} />
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-32 border-t border-brand-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Наши работы</h2>
-            <Link href="/raboty" className="text-[10px] tracking-[0.12em] uppercase border-b border-brand-dark pb-1 hover:text-brand-accent hover:border-brand-accent transition-all hidden md:block">
-              Смотреть все
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {service.gallery.map((imgUrl, idx) => (
-              <div key={idx} className="relative aspect-[3/4] overflow-hidden group rounded-sm">
-                <WarmImage
-                  src={imgUrl}
-                  alt={`${service.title} — пример работы`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                />
+      {service.gallery.length > 0 && (
+        <section className="service-gallery">
+          <div className="section-shell">
+            <div className="readable-heading">
+              <div>
+                <p className="section-label section-label--light">Примеры</p>
+                <h2>Работы мастеров</h2>
               </div>
-            ))}
+              <Link className="readable-link readable-link--light" href="/raboty">
+                Вся галерея
+              </Link>
+            </div>
+            <div className="service-gallery-grid">
+              {service.gallery.slice(0, 3).map((image, index) => (
+                <figure key={image}>
+                  <Image
+                    src={image}
+                    alt={`${service.title}: пример ${index + 1}`}
+                    fill
+                    sizes="(max-width: 700px) 82vw, 33vw"
+                    className="cover-image"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
-          <div className="mt-16 text-center md:hidden">
-            <Button href="/raboty" variant="outline">
-              Вся галерея
-            </Button>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* Masters */}
-      <section className="py-32 border-t border-brand-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-24">
-            <h2 className="font-serif-display text-3xl md:text-5xl text-brand-dark">Команда мастеров</h2>
+      <section className="service-masters">
+        <div className="section-shell">
+          <div className="readable-heading">
+            <div>
+              <p className="section-label">Специалисты</p>
+              <h2>Мастера направления</h2>
+            </div>
+            <p>
+              Выберите знакомого мастера или попросите администратора подобрать
+              специалиста под вашу задачу.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div className="master-grid">
             {categoryMasters.map((master) => (
-              <MasterCard key={master.id} master={master} />
+              <MasterCard master={master} key={master.id} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-32 border-t border-brand-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="md:col-span-1">
-              <h2 className="font-serif-display text-3xl md:text-4xl text-brand-dark">Частые вопросы</h2>
-            </div>
-            <div className="md:col-span-2">
-              <Accordion items={service.faqs} />
-            </div>
+      <section className="service-faq">
+        <div className="section-shell split-section">
+          <div>
+            <p className="section-label">Вопросы</p>
+            <h2>Перед записью</h2>
           </div>
+          <Accordion items={service.faqs} />
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-32 bg-brand-dark text-brand-cream text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <h2 className="font-serif-display text-4xl md:text-5xl tracking-tighter">
-            Записаться
-          </h2>
-          <p className="text-xl md:text-2xl font-normal opacity-90 max-w-2xl mx-auto">
-            Онлайн запись работает круглосуточно.
-          </p>
-          <div className="pt-8">
-            <Button href="/kontakty#zapis" variant="secondary">
-              Записаться
-            </Button>
+      <section className="simple-cta simple-cta--dark">
+        <div className="section-shell simple-cta-grid">
+          <div>
+            <p className="section-label section-label--light">Готовы начать?</p>
+            <h2>Выберите удобное время</h2>
+          </div>
+          <div>
+            <p>
+              Онлайн-запись работает круглосуточно. Если нужна консультация,
+              администратор поможет по телефону.
+            </p>
+            <Button href="/kontakty#zapis">Записаться</Button>
           </div>
         </div>
       </section>
