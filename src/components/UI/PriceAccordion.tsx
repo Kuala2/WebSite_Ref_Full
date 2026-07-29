@@ -17,7 +17,7 @@ export default function PriceAccordion({ prices }: PriceAccordionProps) {
         onClick={() => setIsOpen((value) => !value)}
         aria-expanded={isOpen}
       >
-        <span>{isOpen ? "Скрыть цены" : "Показать цены"}</span>
+        <span>{isOpen ? "Скрыть прайс" : "Смотреть цены"}</span>
         <span className="price-accordion-icon" aria-hidden="true" />
       </button>
       <div className="price-accordion-panel" aria-hidden={!isOpen}>

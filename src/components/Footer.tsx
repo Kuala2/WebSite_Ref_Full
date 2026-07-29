@@ -18,9 +18,6 @@ export default function Footer() {
           </Link>
           <p>Красота, которая остаётся вашей.</p>
         </div>
-        <Link className="button button-accent" href="/kontakty#zapis">
-          Записаться <span aria-hidden="true">↗</span>
-        </Link>
       </div>
 
       <div className="footer-grid">

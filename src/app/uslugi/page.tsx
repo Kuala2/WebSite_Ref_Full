@@ -57,11 +57,15 @@ export default function ServicesCatalogPage() {
                     <h2>{service.title}</h2>
                     <strong>от {service.priceFrom}</strong>
                   </div>
-                  <Link href={`/uslugi/${service.slug}`} aria-label="Подробнее">
-                    ↗
-                  </Link>
                 </div>
                 <p>{service.description}</p>
+                <Link
+                  className="catalog-detail-link"
+                  href={`/uslugi/${service.slug}`}
+                >
+                  <span>Об услуге</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
                 <PriceAccordion prices={service.prices} />
               </div>
             </article>

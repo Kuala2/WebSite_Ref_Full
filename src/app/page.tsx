@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import MobileStickyCTA from "@/components/UI/MobileStickyCTA";
-import MasterCard from "@/components/UI/MasterCard";
 import {
-  MAIN_FAQS,
-  MASTERS,
   REVIEWS,
   SALON_INFO,
   TOP_SERVICES,
 } from "@/constants/data";
-import Accordion from "@/components/UI/Accordion";
 
 const previewWorks = [
   { src: "/images/work_airtouch.webp", title: "Мягкий AirTouch" },
@@ -21,8 +16,6 @@ const previewWorks = [
 export default function Home() {
   return (
     <div className="home-page">
-      <MobileStickyCTA />
-
       <section className="home-intro" aria-labelledby="home-title">
         <div className="home-intro-copy">
           <p className="section-label">Салон красоты · Нижний Новгород</p>
@@ -115,7 +108,9 @@ export default function Home() {
                   </div>
                   <div className="service-preview-price">
                     <strong>от {service.priceFrom}</strong>
-                    <span aria-hidden="true">↗</span>
+                    <span className="service-preview-action">
+                      Подробнее <span aria-hidden="true">→</span>
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -159,7 +154,7 @@ export default function Home() {
               <span>Время мастера полностью принадлежит вам.</span>
             </li>
           </ul>
-          <Link className="readable-link readable-link--light" href="/o-salone">
+          <Link className="readable-link" href="/o-salone">
             О салоне и команде
           </Link>
         </div>
@@ -169,12 +164,12 @@ export default function Home() {
         <div className="section-shell">
           <div className="readable-heading">
             <div>
-              <p className="section-label section-label--light">Портфолио</p>
+              <p className="section-label">Портфолио</p>
               <h2>Работы наших мастеров</h2>
             </div>
             <div>
               <p>Результаты без фотостоков и чужих референсов.</p>
-              <Link className="readable-link readable-link--light" href="/raboty">
+              <Link className="readable-link" href="/raboty">
                 Открыть всю галерею
               </Link>
             </div>
@@ -196,28 +191,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-team">
-        <div className="section-shell">
-          <div className="readable-heading">
-            <div>
-              <p className="section-label">Команда</p>
-              <h2>Мастера, которым доверяют</h2>
-            </div>
-            <div>
-              <p>У каждого — своя сильная специализация и опыт от 8 лет.</p>
-              <Link className="readable-link" href="/o-salone#team">
-                Познакомиться со всей командой
-              </Link>
-            </div>
-          </div>
-          <div className="home-team-grid">
-            {MASTERS.slice(0, 3).map((master) => (
-              <MasterCard master={master} compact key={master.id} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="home-review">
         <div className="section-shell home-review-grid">
           <div className="home-review-score">
@@ -233,20 +206,6 @@ export default function Home() {
               <span>{REVIEWS[0].procedure}</span>
             </footer>
           </blockquote>
-        </div>
-      </section>
-
-      <section className="home-faq">
-        <div className="section-shell home-faq-grid">
-          <div>
-            <p className="section-label">Перед визитом</p>
-            <h2>Коротко о важном</h2>
-            <p>
-              Остальные вопросы можно задать администратору по телефону или во
-              ВКонтакте.
-            </p>
-          </div>
-          <Accordion items={MAIN_FAQS.slice(0, 3)} />
         </div>
       </section>
 
@@ -271,9 +230,8 @@ export default function Home() {
               <span>Записаться онлайн</span>
               <span aria-hidden="true">↗</span>
             </Link>
-            <a className="ui-button ui-button--ghost" href={SALON_INFO.phoneLink}>
-              <span>{SALON_INFO.phone}</span>
-              <span aria-hidden="true">↗</span>
+            <a className="booking-phone-link" href={SALON_INFO.phoneLink}>
+              Или позвонить: {SALON_INFO.phone}
             </a>
           </div>
         </div>
