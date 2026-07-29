@@ -2338,7 +2338,7 @@ button {
 
   .home-intro-scrim {
     background:
-      linear-gradient(180deg, rgba(10, 14, 12, 0.42) 0%, rgba(10, 14, 12, 0.07) 44%, rgba(10, 14, 12, 0.48) 100%),
+      linear-gradient(180deg, rgba(10, 14, 12, 0.46) 0%, rgba(10, 14, 12, 0.08) 34%, rgba(10, 14, 12, 0.84) 100%),
       linear-gradient(90deg, rgba(10, 14, 12, 0.54) 0%, rgba(10, 14, 12, 0.08) 88%);
   }
 
@@ -2355,7 +2355,7 @@ button {
 
   .home-intro-content {
     display: block;
-    padding: clamp(100px, 16svh, 132px) 0 0;
+    padding: clamp(82px, 13svh, 108px) 0 0;
   }
 
   .home-intro-content h1 {
@@ -2373,22 +2373,22 @@ button {
   .home-intro-copy {
     width: calc(100% + 32px);
     max-width: none;
-    margin: clamp(118px, 18svh, 150px) -16px 0;
-    padding: 22px 16px 20px;
+    margin: clamp(62px, 10svh, 84px) -16px 0;
+    padding: 24px 16px 22px;
     border: 0;
-    background: rgba(245, 241, 233, 0.97);
-    color: var(--ink);
+    background: linear-gradient(180deg, rgba(8, 12, 10, 0.12) 0%, rgba(8, 12, 10, 0.68) 30%, rgba(8, 12, 10, 0.94) 100%);
+    color: var(--white);
     backdrop-filter: none;
-    box-shadow: 0 -18px 44px rgba(4, 8, 6, 0.14);
+    box-shadow: none;
   }
 
   .home-intro-text {
-    max-width: 350px;
+    max-width: 360px;
     display: block;
-    margin: 0 0 18px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.5;
+    margin: 0 0 20px;
+    color: rgba(255, 253, 248, 0.88);
+    font-size: 16px;
+    line-height: 1.45;
   }
 
   .home-intro-mobile-facts {
@@ -2396,8 +2396,8 @@ button {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 14px;
     padding: 14px 0 13px;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    border-top: 1px solid rgba(255, 253, 248, 0.32);
+    border-bottom: 1px solid rgba(255, 253, 248, 0.25);
   }
 
   .home-intro-mobile-facts span {
@@ -2409,11 +2409,11 @@ button {
 
   .home-intro-mobile-facts span:not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid var(--line);
+    border-left: 1px solid rgba(255, 253, 248, 0.22);
   }
 
   .home-intro-mobile-facts strong {
-    color: var(--ink);
+    color: var(--white);
     font-family: var(--font-display), Georgia, serif;
     font-size: clamp(22px, 6.6vw, 26px);
     font-weight: 550;
@@ -2422,7 +2422,7 @@ button {
   }
 
   .home-intro-mobile-facts small {
-    color: var(--muted);
+    color: rgba(255, 253, 248, 0.68);
     font-size: 10px;
     line-height: 1.35;
   }
