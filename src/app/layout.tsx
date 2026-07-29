@@ -22,25 +22,25 @@ export const metadata: Metadata = {
   description:
     "Точные стрижки, сложное окрашивание, маникюр и естественный перманент. Салон «Стенс» на Большой Покровской.",
   openGraph: {
-    title: "Стенс — красота, которая остаётся вашей",
+    title: "Стенс — не меняем вас, подчёркиваем",
     description:
       "Салон красоты в Нижнем Новгороде. Точные формы, живой цвет и деликатные детали.",
     type: "website",
     locale: "ru_RU",
     images: [
       {
-        url: "/og-light-v3.png",
-        width: 1729,
-        height: 910,
-        alt: "Стенс — красота, которая остаётся вашей",
+        url: "/og-cinematic-v4.png",
+        width: 1727,
+        height: 911,
+        alt: "Стенс — не меняем вас, подчёркиваем",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Стенс — красота, которая остаётся вашей",
+    title: "Стенс — не меняем вас, подчёркиваем",
     description: "Салон красоты в Нижнем Новгороде.",
-    images: ["/og-light-v3.png"],
+    images: ["/og-cinematic-v4.png"],
   },
 };
 

@@ -17,52 +17,66 @@ export default function Home() {
   return (
     <div className="home-page">
       <section className="home-intro" aria-labelledby="home-title">
-        <div className="home-intro-copy">
-          <p className="section-label">Салон красоты · Нижний Новгород</p>
-          <h1 id="home-title">
-            Красота, которая остаётся <em>вашей.</em>
-          </h1>
-          <p className="home-intro-text">
-            Точные стрижки, живой цвет и деликатные детали. Мы не меняем вас —
-            только подчёркиваем то, что уже красиво.
-          </p>
-          <div className="home-intro-actions">
-            <Link className="ui-button ui-button--primary" href="/kontakty#zapis">
-              <span>Записаться</span>
-              <span aria-hidden="true">↗</span>
-            </Link>
-            <Link className="readable-link" href="/uslugi">
-              Посмотреть услуги и цены
-            </Link>
-          </div>
-          <div className="home-intro-facts" aria-label="О салоне">
-            <div>
-              <strong>{SALON_INFO.rating}</strong>
-              <span>рейтинг</span>
-            </div>
-            <div>
-              <strong>{SALON_INFO.reviewsCount}</strong>
-              <span>отзывов</span>
-            </div>
-            <div>
-              <strong>с 2018</strong>
-              <span>в Нижнем</span>
-            </div>
-          </div>
-        </div>
+        <Image
+          src="/images/hero.webp"
+          alt="Мастер салона «Стенс» работает с клиенткой"
+          fill
+          priority
+          sizes="100vw"
+          className="home-intro-image"
+        />
+        <div className="home-intro-scrim" />
 
-        <div className="home-intro-photo">
-          <Image
-            src="/images/hero.webp"
-            alt="Мастер салона «Стенс» работает с клиенткой"
-            fill
-            priority
-            sizes="(max-width: 900px) 100vw, 48vw"
-            className="cover-image"
-          />
-          <div className="photo-caption">
-            <span>Большая Покровская, 58</span>
-            <span>5 минут от м. Горьковская</span>
+        <div className="home-intro-frame">
+          <div className="home-intro-kicker">
+            <span>Салон красоты</span>
+            <span>Нижний Новгород</span>
+          </div>
+
+          <div className="home-intro-content">
+            <h1 id="home-title">
+              Не меняем вас.
+              <em>Подчёркиваем.</em>
+            </h1>
+            <div className="home-intro-copy">
+              <p className="home-intro-text">
+                Точные стрижки, живой цвет и деликатные детали — с учётом вашего
+                характера, привычек и ритма жизни.
+              </p>
+              <div className="home-intro-actions">
+                <Link
+                  className="ui-button ui-button--primary"
+                  href="/kontakty#zapis"
+                >
+                  <span>Выбрать время</span>
+                  <span aria-hidden="true">↗</span>
+                </Link>
+                <Link
+                  className="readable-link readable-link--light"
+                  href="/uslugi"
+                >
+                  Услуги и цены
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-intro-meta">
+            <div>
+              <span>{SALON_INFO.address}</span>
+              <span>{SALON_INFO.locationNote}</span>
+            </div>
+            <div className="home-intro-facts" aria-label="О салоне">
+              <span>
+                <strong>{SALON_INFO.rating}</strong> рейтинг
+              </span>
+              <span>
+                <strong>{SALON_INFO.reviewsCount}</strong> отзывов
+              </span>
+              <span>
+                <strong>с 2018</strong> в Нижнем
+              </span>
+            </div>
           </div>
         </div>
       </section>
